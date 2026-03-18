@@ -1,0 +1,63 @@
+// ============================================
+// Gallery Slider
+// ============================================
+#galerie {
+  padding: 0 !important;
+  .gallery-swiper {
+    border-radius: 0.75rem;
+    overflow: hidden;
+
+    .swiper-slide {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    // Arrows
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: @color_bg_plain;
+      background: fade(@color_primary, 60%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      transition: background 0.2s ease;
+
+      &::after {
+        font-size: 18px;
+      }
+
+      &:hover {
+        background: @color_primary;
+      }
+    }
+
+    // Pagination dots
+    .swiper-pagination-bullet {
+      background: @color_bg_plain;
+      opacity: 0.5;
+      width: 10px;
+      height: 10px;
+
+      &-active {
+        opacity: 1;
+        background: @color_bg_plain;
+      }
+    }
+  }
+}
+
+
+@media (max-width: @screen_sm) {
+  .gallery-swiper .swiper-slide img {
+    height: 250px;
+  }
+
+  .gallery-swiper .swiper-button-prev,
+  .gallery-swiper .swiper-button-next {
+    display: none;
+  }
+}

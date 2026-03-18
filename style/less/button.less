@@ -1,0 +1,35 @@
+.btn-sposato {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  height: 4.5rem;
+  padding: 0 2.25rem;
+  background-color: @color_primary;
+  color: @color_bg_plain;
+  font-family: @font_family_primary;
+  font-size: 1.125em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  border-radius: 0.625rem;
+  border: 2px solid @color_bg_plain;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  width: 100%;
+  text-decoration: none;
+  &:hover {
+    color: @color_bg_plain;
+    background-color: @color_primary;
+  }
+  span {
+    flex-grow: max(100);
+    width: 1rem;
+  }
+}
+.btn-sposato-50 {
+  width: calc(52% - (2.25rem / 2));
+}
+@media (max-width: 767.98px) {
+  .btn-sposato-50 { width: 100%; }
+
+}

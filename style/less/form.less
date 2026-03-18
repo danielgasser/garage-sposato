@@ -1,0 +1,250 @@
+// ============================================
+// Forms + Modals
+// ============================================
+
+// ─── Modal overrides ────────────────────────────
+
+// ─── Custom Modal ───────────────────────────────
+
+.sposato-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  overflow-y: auto;
+  padding: 2rem;
+
+  &.show {
+    display: block;
+  }
+}
+
+.sposato-modal-dialog {
+  margin: 2rem auto;
+}
+
+.sposato-modal-content {
+  background: @color_bg_plain;
+  border-radius: @card_radius;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.25s ease;
+}
+
+.sposato-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid fade(@color_primary, 10%);
+
+  .heading-lg {
+    font-size: 1.75em;
+    margin: 0;
+  }
+
+  .btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::after {
+      content: '✕';
+    }
+  }
+}
+
+.sposato-modal-body {
+  padding: 2rem;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: @screen_sm) {
+  .sposato-modal {
+    padding: 1rem;
+  }
+
+  .sposato-modal-header {
+    padding: 1.25rem;
+  }
+
+  .sposato-modal-body {
+    padding: 1.25rem;
+  }
+}
+
+// ─── Form styles ────────────────────────────────
+
+.sposato-form {
+
+  // Hide honeypot
+  .form-honeypot {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  // Labels
+  .form-label {
+    font-family: @font_family_primary;
+    font-weight: 600;
+    font-size: 0.95em;
+    color: @color_primary;
+    margin-bottom: 0.35rem;
+  }
+
+  // Inputs & textareas
+  .form-control,
+  .form-select {
+    font-family: @font_family_primary;
+    font-size: 1em;
+    color: @color_primary;
+    border: 1px solid fade(@color_primary, 20%);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: @color_bg_plain;
+
+    &:focus {
+      border-color: @color_primary;
+      box-shadow: 0 0 0 3px fade(@color_primary, 10%);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: fade(@color_primary, 35%);
+    }
+  }
+
+  .form-select {
+    cursor: pointer;
+  }
+
+  textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  // Validation states
+  .is-invalid {
+    border-color: #dc3545 !important;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+    }
+  }
+
+  .is-valid {
+    border-color: #198754 !important;
+  }
+
+  // Submit button icon override (lucide stroke, not fill)
+  .btn-sposato .icon {
+    width: 1.5em;
+    height: 1.5em;
+    stroke: @color_bg_plain;
+    fill: none;
+  }
+
+  // Loading state
+  &.is-submitting {
+    pointer-events: none;
+    opacity: 0.7;
+
+    .btn-sposato::after {
+      content: '';
+      width: 1.25rem;
+      height: 1.25rem;
+      border: 2px solid transparent;
+      border-top-color: @color_bg_plain;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin-left: 1rem;
+    }
+  }
+}
+
+// ─── Feedback message ───────────────────────────
+
+.form-feedback {
+  padding: 0;
+  font-family: @font_family_primary;
+  font-size: 1em;
+  border-radius: 0.5rem;
+  display: none;
+  margin: 0 auto;
+  &.show {
+    display: block;
+    padding: 1rem 1.25rem;
+  }
+
+  &.success {
+    background-color: fade(#198754, 10%);
+    color: #198754;
+    border: 1px solid fade(#198754, 25%);
+  }
+
+  &.error {
+    background-color: fade(#dc3545, 10%);
+    color: #dc3545;
+    border: 1px solid fade(#dc3545, 25%);
+  }
+}
+
+// ─── Spinner ────────────────────────────────────
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ─── Responsive ─────────────────────────────────
+
+@media (max-width: @screen_sm) {
+  .modal {
+    .modal-header {
+      padding: 1.25rem 1.25rem;
+    }
+
+    .modal-body {
+      padding: 1.25rem;
+    }
+
+    .heading-lg {
+      font-size: 1.5em;
+    }
+  }
+
+  .sposato-form {
+    .form-control,
+    .form-select {
+      font-size: 16px; // prevents iOS zoom
+    }
+  }
+}

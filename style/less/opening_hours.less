@@ -1,0 +1,71 @@
+.opening-hours {
+  width: 100%;
+
+  &-title {
+    font-family: @font_family_primary;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: @color_primary;
+    margin-bottom: 1.5rem;
+  }
+
+  &-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: @font_family_primary;
+
+    tr {
+      border-bottom: 1px solid fade(@color_primary, 10%);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      padding: 0.85rem 0.5rem;
+      font-size: 1.1em;
+      color: @color_primary;
+
+      &:first-child {
+        font-weight: 600;
+        width: 40%;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        text-align: right;
+        font-weight: 300;
+      }
+    }
+
+    .closed td {
+      opacity: 0.4;
+    }
+  }
+}
+
+@media (max-width: @screen_md) {
+  .opening-hours-table {
+    td {
+      display: block;
+      width: 100%;
+      text-align: left !important;
+      padding: 0.25rem 0.5rem;
+
+      &:first-child {
+        padding-top: 1rem;
+        width: 100%;
+      }
+
+      &:last-child {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid fade(@color_primary, 10%);
+      }
+    }
+
+    .closed td:last-child {
+      border-bottom: 1px solid fade(@color_primary, 10%);
+    }
+  }
+}

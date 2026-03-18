@@ -1,0 +1,29 @@
+/* ============================================
+   Responsive tweaks (Bootstrap handles grid)
+   ============================================ */
+@media (max-width: @screen_md) {
+  .heading-lg { font-size: 2.5em; }
+  .stat-number { font-size: 36px; }
+}
+@media (max-width: @screen_sm) {
+  .heading-lg { font-size: 2.25em; }
+  .card-sposato { padding: 2rem; }
+  .btn-sposato { font-size: 1em; height: 3.75rem; }
+  .stat-label { font-size: 14px; }
+  .parallax-section { padding: 4rem 0; min-height: 20rem; }
+}
+@media (max-width: @screen_xs) {
+  .brand-list { gap: 30px; }
+}
+
+/* --- iOS parallax fix --- */
+@supports (-webkit-touch-callout: none) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}
+@media (max-width: @screen_lg_1280) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}

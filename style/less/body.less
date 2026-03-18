@@ -1,0 +1,78 @@
+/* --- Base overrides --- */
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: @color_primary;
+  background-color: @color_bg_plain;
+}
+/* --- Section spacing --- */
+.section {
+  padding: 5rem 1.5rem;
+}
+.section-card {
+  padding: 2rem 0;
+}
+/* --- Card (white bg containers) --- */
+.card-sposato {
+  padding: 3rem;
+}
+
+.text-body {
+    img {
+      width: 100%;
+      border-radius: @card_radius;
+    }
+}
+
+#service, #bilder, #uberuns {
+  background-color: @color_bg_light;
+
+}
+#bilder {
+  background-color: @color_bg_light;
+}
+/* --- Stats --- */
+.stat-item svg {
+  width: 50px;
+  height: 50px;
+  stroke: @color_primary;
+  margin: 0 auto 15px;
+}
+.stat-number {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: @color_primary;
+}
+.stat-label {
+  font-size: 18px;
+  opacity: 0.9;
+  color: @color_primary;
+}
+
+/* --- Brand list --- */
+.brand-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  gap: 66px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.brand-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.brand-item img {
+  width: auto;
+  height: 75px;
+}
+.brand-name {
+  color: @color_primary;
+  font-size: 1.05em;
+}
