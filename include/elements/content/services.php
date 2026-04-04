@@ -24,7 +24,7 @@
                         <span class="brand-name">Audi</span>
                     </li>
                     <li class="brand-item">
-                        <img alt="Skoda" src="https://sposato.carrd.co/assets/images/image05.svg">
+                        <img alt="Skoda" src="assets/images/auto_brands/SKODA_logo_farbig.svg">
                         <span class="brand-name">Skoda</span>
                     </li>
                 </ul>

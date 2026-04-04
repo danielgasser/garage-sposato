@@ -1,5 +1,7 @@
 <?php
-$configData  = require $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
+/**
+ * @var $configData;
+ */
 ?>
 
 <head>
