@@ -95,8 +95,7 @@
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-sposato mt-2">
-                                        <i data-lucide="wrench" class="icon"></i>
-                                        <span>Reparatur anmelden</span>
+                                        <span><i data-lucide="wrench" class="icon"></i>Reparatur anmelden</span>
                                     </button>
                                 </div>
                             </div>
@@ -203,8 +202,8 @@
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-sposato mt-2">
-                                        <i data-lucide="settings" class="icon"></i>
-                                        <span>Service anmelden</span>
+
+                                        <span><i data-lucide="settings" class="icon"></i>Service anmelden</span>
                                     </button>
                                 </div>
                             </div>
@@ -231,11 +230,7 @@
                         <h2 class="heading-lg mb-4">Kontakt</h2>
                         <p class="text-body mb-4">Fragen, Anliegen oder einfach Hallo sagen.</p>
                         <p class="text-body mt-3">
-                            <?= $configInfo['name'] ?><br>
-                            <?= $configInfo['address'] ?><br>
-                            <?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?><br>
-                            <?= $configInfo['country'] ?><br><br>
-                            <a href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
+                            <?= $configInfo['name'] ?><br><?= $configInfo['address'] ?><br><?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?><br><?= $configInfo['country'] ?><br><br><a href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
                         </p>
                     </div>
                     <div class="col-lg-7">
@@ -267,8 +262,8 @@
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-sposato mt-2">
-                                        <i data-lucide="send" class="icon"></i>
-                                        <span>Nachricht senden</span>
+
+                                        <span><i data-lucide="send" class="icon"></i>Nachricht senden</span>
                                     </button>
                                 </div>
                             </div>
@@ -293,8 +288,8 @@
                 <h2 class="heading-lg" style="max-width:none; margin: 0 auto 0.5rem;">Rufen Sie uns an</h2>
                 <p class="text-body mb-4">Wir sind für Sie da.</p>
                 <a href="tel:<?= $configInfo['phone']?>" class="btn btn-sposato" style="justify-content:center;">
-                    <i data-lucide="phone" class="icon"></i>
-                    <span><?= $configInfo['phone']?></span>
+
+                    <span><i data-lucide="phone" class="icon"></i><?= $configInfo['phone']?></span>
                 </a>
             </div>
         </div>

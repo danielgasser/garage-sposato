@@ -31,12 +31,12 @@
                 <div class="mt-auto pt-4">
 
                     <button class="btn btn-sposato btn-sposato-50 mt-4" data-modal-target="modalReparatur">
-                        <i data-lucide="calendar"></i>
-                        <span>Termin vereinbaren</span>
+
+                        <span><i data-lucide="calendar"></i>Termin vereinbaren</span>
                     </button>
                     <a href="#" class="btn btn-sposato btn-sposato-50 mt-4" data-modal-target="modalAnrufen">
-                        <i data-lucide="phone"></i>
-                        <span>Anrufen</span>
+
+                        <span><i data-lucide="phone"></i>Anrufen</span>
                     </a>
                 </div>
             </div>
@@ -50,8 +50,7 @@
                 <div class="mt-auto pt-4">
 
                     <a href="#" class="btn btn-sposato mt-4" data-modal-target="modalService">
-                        <i data-lucide="wrench"></i>
-                        <span>Zum Service anmelden</span>
+                        <span><i data-lucide="wrench"></i>Service anmelden</span>
                     </a>
                 </div>
             </div>

@@ -14,11 +14,7 @@
                     Seit über 27 Jahren in Ihrer Nähe.
                 </p>
                 <p class="footer-text">
-                    <?= $configInfo['name'] ?><br>
-                    <?= $configInfo['address'] ?><br>
-                    <?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?><br>
-                    <?= $configInfo['country'] ?><br><br>
-                    <a href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
+                    <?= $configInfo['name'] ?><br><?= $configInfo['address'] ?><br><?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?><br><?= $configInfo['country'] ?><br><br><a href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
                 </p>
             </div>
 

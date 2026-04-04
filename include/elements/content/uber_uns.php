@@ -14,8 +14,8 @@
             </div>
             <div class="col-lg-12">
                 <a href="#" class="btn btn-sposato mt-4" data-modal-target="modalKontakt">
-                    <i data-lucide="heart"></i>
-                    <span>Melden Sie sich!</span>
+
+                    <span><i data-lucide="heart"></i>Melden Sie sich</span>
                 </a>
             </div>
             <div class="col-lg-6">

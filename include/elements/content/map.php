@@ -14,8 +14,7 @@
                 <div class="mt-auto pt-4">
                     <a href="https://www.google.com/maps/dir/?api=1&destination=' . <?= $configInfo['lat'] ?> . ',' .  <?= $configInfo['lng'] ?>"
                        target="_blank" class="btn btn-sposato">
-                        <i data-lucide="navigation"></i>
-                        <span>Route planen</span>
+                        <span><i data-lucide="navigation"></i>Route planen</span>
                     </a>
                 </div>
             </div>
