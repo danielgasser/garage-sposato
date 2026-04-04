@@ -7,7 +7,12 @@
             <div class="col-lg-6">
                 <h2 class="heading-lg">Reparaturen</h2>
                 <p class="subtitle">Wir lösen grosse und kleine Probleme.</p>
-                <p class="text-body mt-3">Reparaturen aller Art. Motor, Getriebe, Lenkung, Elektronik, etc.</p>
+                <p class="text-body mt-3">Reparaturen aller Art. Motor, Getriebe, Lenkung, Elektronik, Bremsenverschleiss oder ein ungewohntes Geräusch, das sich nur schwer beschreiben lässt – jedes Fahrzeug wird bei uns mit der gleichen Sorgfalt und Fachkenntnis behandelt.
+                    </p>
+                <p class="text-body mt-3">
+                    Mit 27 Jahren Erfahrung in der Branche haben wir bereits eine Vielzahl von Fahrzeugproblemen erfolgreich gelöst.</p>
+                <p class="text-body mt-3">
+                    Wir diagnostizieren präzise, informieren Sie verständlich und reparieren fachgerecht – damit Sie so bald wie möglich wieder sicher auf der Strasse sind. Ihr Auto ist bei uns in guten Händen.</p>
                 <p class="text-body">Wir sind auf folgende Marken spezialisert:</p>
 
                 <ul class="brand-list">
@@ -43,10 +48,9 @@
 
             <div class="col-lg-6 d-flex flex-column">
                 <h2 class="heading-lg">Service</h2>
-                <p class="subtitle">Ultrices imperdiet auctor</p>
-                <p class="text-body mt-3">Euismod diam tortor varius nulla nunc.</p>
-                <p class="text-body mt-3">Interdum scelerisque enim imperdiet neque massa tempus magnis est. Scelerisque
-                    id facilisis tempus ac lobortis arcu. Dis tellus tortor, blandit rutrum.</p>
+                <p class="subtitle">Vorsorge statt Pannenhilfe</p>
+                <p class="text-body mt-3">Ein regelmässiger Service ist die beste Investition in die Sicherheit und Langlebigkeit Ihres Fahrzeugs. Wir prüfen, warten und pflegen Ihr Auto nach Herstellervorgaben – sorgfältig, termingerecht und transparent.</p>
+                <p class="text-body mt-3">Nach jedem Service informieren wir Sie über den Zustand Ihres Fahrzeugs und weisen Sie rechtzeitig auf allfällige kommende Arbeiten hin. So behalten Sie stets den Überblick – ohne unangenehme Überraschungen.</p>
                 <div class="mt-auto pt-4">
 
                     <a href="#" class="btn btn-sposato mt-4" data-modal-target="modalService">
