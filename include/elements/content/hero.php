@@ -7,7 +7,7 @@
             <h1>Garage Sposato</h1>
             <h2>zuverlässig</h2>
             <h2>erfahren</h2>
-            <h2>gut</h2>
+            <h2>mit Herz</h2>
         </div>
     </div>
 </section>

@@ -6,11 +6,10 @@
         <div class="row g-5">
             <div class="col-lg-12">
                 <h2 class="heading-lg">Über uns</h2>
-                <p class="subtitle">Nunc elementum viverra</p>
-                <p class="text-body mt-3">Id quam malesuada turpis eu et. Lacinia dictum mi metus integer parturient
-                    condimentum duis etiam. Leo dignissim imperdiet vis egestas nibh sapien. Venenatis at cursus,
-                    rhoncus ante adipiscing.</p>
-
+                <p class="subtitle">Persönlich, kompetent und mit Herzblut – seit 27 Jahren in Winterthur</p>
+                <p class="text-body mt-3">Die Garage Sposato ist seit über 27 Jahren ein verlässlicher Partner rund ums Fahrzeug in Winterthur. Was als Leidenschaft für Automobile begann, ist heute ein eingespieltes Team, das täglich alles dafür tut, dass Sie sicher und sorgenfrei auf der Strasse sind.</p>
+<p class="text-body mt-3">Geschäftsführer Salvatore Sposato steht für Qualität, Ehrlichkeit und persönliche Beratung – Werte, die bei der Garage Sposato seit dem ersten Tag gelebt werden. Gemeinsam mit Mechaniker Marco [Nachname] und dem Administrationsteam sorgt er dafür, dass jeder Kundenbesuch unkompliziert und angenehm verläuft.</p>
+<p class="text-body mt-3">Ein kleines Team mit grossem Engagement. Bei uns kennt man sich – und das schätzen unsere Kundinnen und Kunden seit Jahren.</p>
             </div>
             <div class="col-lg-12">
                 <a href="#" class="btn btn-sposato mt-4" data-modal-target="modalKontakt">

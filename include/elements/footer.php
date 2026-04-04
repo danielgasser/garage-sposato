@@ -14,7 +14,9 @@
                     Seit über 27 Jahren in Ihrer Nähe.
                 </p>
                 <p class="footer-text">
-                    <?= $configInfo['name'] ?><br><?= $configInfo['address'] ?><br><?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?><br><?= $configInfo['country'] ?><br><br><a href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
+                    <?= $configInfo['name'] ?><br><?= $configInfo['address'] ?><br><?= $configInfo['postal_code'] ?>
+                    &nbsp;<?= $configInfo['city'] ?><br><?= $configInfo['country'] ?><br><br><a
+                            href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
                 </p>
             </div>
 
@@ -22,9 +24,9 @@
             <div class="col-lg-4">
                 <h3 class="footer-title">Links</h3>
                 <ul class="footer-links">
-                    <li><a href="#service">Reparaturen</a></li>
-                    <li><a href="#service">Service</a></li>
-                    <li><a href="#angebot">Angebote</a></li>
+                    <li><a href="#reparatur">Reparaturen</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#location_opening_hours">Standort & Öffnungszeiten</a></li>
                     <li><a href="#galerie">Galerie</a></li>
                     <li><a href="#" data-modal-target="modalKontakt">Kontakt</a></li>
                 </ul>
@@ -44,7 +46,9 @@
 
         <div class="footer-bottom">
             <div class="container-xl d-flex justify-content-between align-items-center flex-wrap">
-                <p class="mb-0">&copy; <?= date('Y') ?> Garage Sposato. Alle Rechte vorbehalten.</p>
+                <p class="mb-0">&copy; <?= date('Y') ?> Garage Sposato. Alle Rechte vorbehalten. | Mit &hearts;
+                    geschmiedet
+                    von <a href="https://danielgasser.com" target="_blank">Daniel Gasser</a></p>
                 <div class="footer-legal">
                     <a href="/impressum">Impressum</a>
                     <a href="/datenschutz">Datenschutz</a>

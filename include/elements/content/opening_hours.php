@@ -3,8 +3,7 @@
 <table class="opening-hours-table">
     <tr>
         <td>Montag</td>
-        <td>08:00 – 12:00</td>
-        <td>13:30 – 17:30</td>
+        <td colspan="2">Geschlossen</td>
     </tr>
     <tr>
         <td>Dienstag</td>

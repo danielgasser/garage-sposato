@@ -11,8 +11,12 @@
                     ?>
                 </div>
                 <div class="col-lg-4">
-                    <h2 class="heading-lg">Bilder</h2>
-                    <p class="text-lead mt-3">Nisl ultrices tempus dictum hendrerit condimentum. Nascetur nisl cras lacus tempus non duis scelerisque consequat. Nisi risus interdum cep ata semper enim. Dui donec blandit.</p>
+                    <h2 class="heading-lg">Impressionen</h2>
+
+                    <p class="subtitle">Ein Blick hinter die Kulissen</p>
+
+                    <p class="text-body mt-3">Hier sehen Sie, wo Qualität entsteht – unsere Werkstatt, unser Team und
+                        die Fahrzeuge, die wir täglich mit Sorgfalt betreuen. Willkommen bei der Garage Sposato.</p>
 
                 </div>
             </div>

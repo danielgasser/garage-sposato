@@ -3,7 +3,7 @@
  * Form submission endpoint.
  * POST /php/submit.php
  */
-$configData  = require $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
+$configData = require $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
 $configInfo = $configData['company'];
 require_once 'include/classes/FormHandler.php';
 
@@ -38,7 +38,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/hero.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/stats.php';
 ?>
 
-<!-- ======== Services (Reparaturen + Service) ======== -->
+<!-- ======== Reparaturen ======== -->
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/reparaturen.php';
+?>
+<!-- ======== Services ======== -->
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/services.php';
 ?>
@@ -55,11 +59,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/bilder.php';
 
 <!-- ======== Angebote & Öffnungszeiten ======== -->
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/map.php';
+//include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/map.php';
 ?>
 <!-- ======== Angebote & Öffnungszeiten ======== -->
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/angebote.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/location_opening_hours.php';
 ?>
 
 <!-- ======== Angebote & Öffnungszeiten ======== -->
