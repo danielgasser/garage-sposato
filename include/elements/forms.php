@@ -100,8 +100,6 @@
                                     </button>
                                 </div>
                             </div>
-
-                            <div class="form-feedback"></div>
                         </form>
                     </div>
                 </div>
@@ -225,6 +223,7 @@
         <div class="sposato-modal-content">
             <div class="sposato-modal-header">
                 <button type="button" class="btn-close"></button>
+                <div class="form-feedback" id="feedback-kontakt"></div>
             </div>
             <div class="sposato-modal-body">
                 <div class="row g-5">
@@ -241,7 +240,7 @@
                     </div>
                     <div class="col-lg-7">
 
-                        <form class="sposato-form" data-form-id="kontakt" novalidate>
+                        <form class="sposato-form" data-form-id="kontakt" data-feedback="feedback-kontakt" novalidate>
                             <input type="hidden" name="form_id" value="kontakt">
                             <input type="hidden" name="_csrf" value="<?= htmlspecialchars($csrfToken) ?>">
                             <div class="form-honeypot" aria-hidden="true">
@@ -274,7 +273,6 @@
                                 </div>
                             </div>
 
-                            <div class="form-feedback"></div>
                         </form>
                     </div>
                 </div>

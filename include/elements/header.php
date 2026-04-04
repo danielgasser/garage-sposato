@@ -2,8 +2,7 @@
 ?>
 
 <head>
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf6NIwsAAAAANq1jMIAsPofzmP5qg0byW5AO979"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lf-tI4sAAAAAEC5KwgJDJjdLiCXsDI2cYA10DyL"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Garage Sposato</title>

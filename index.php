@@ -3,7 +3,7 @@
  * Form submission endpoint.
  * POST /php/submit.php
  */
-$configData  = require __DIR__ . '/include/config.php';
+$configData  = require $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
 $configInfo = $configData['company'];
 require_once 'include/classes/FormHandler.php';
 

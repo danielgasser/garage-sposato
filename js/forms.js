@@ -29,9 +29,29 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
 
             clearValidation(form);
+
             const feedback = getFeedback(form);
             feedback.className = 'form-feedback';
             feedback.textContent = '';
+
+            // Get reCAPTCHA token
+            let captchaToken = '';
+            try {
+                captchaToken = await grecaptcha.execute('6Lf-tI4sAAAAAEC5KwgJDJjdLiCXsDI2cYA10DyL', {
+                    action: form.dataset.formId
+                });
+
+            } catch (err) {
+                console.error('Captcha error:', err);
+
+                feedback.classList.add('show', 'error');
+                feedback.textContent = 'Captcha-Fehler. Bitte laden Sie die Seite neu.';
+                form.classList.remove('is-submitting');
+                return;
+            }
+
+            const formData = new FormData(form);
+            formData.append('_captcha', captchaToken);
 
             if (!validateForm(form)) return;
 
@@ -40,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 const response = await fetch('/include/elements/submit.php', {
                     method: 'POST',
-                    body: new FormData(form),
+                    body: formData,
+                    credentials: 'same-origin',
                 });
                 const text = await response.text();
 
@@ -190,6 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getFeedback(form) {
         const id = form.dataset.feedback;
-        return id ? document.getElementById(id) : getFeedback(form);
+        return id ? document.getElementById(id) : form.querySelector('.form-feedback');
     }
 });

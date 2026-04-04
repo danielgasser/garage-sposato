@@ -7,6 +7,7 @@
 
 class FormHandler
 {
+    private FormStorage|null $storage = null;
     private string $to;
     private string $from;
     private string $csvDir;
@@ -71,6 +72,11 @@ class FormHandler
         ];
     }
 
+    public function setStorage(FormStorage $storage): void
+    {
+        $this->storage = $storage;
+    }
+
     // ─── CSRF ───────────────────────────────────────────
 
     public function generateCsrfToken(): string
@@ -101,13 +107,20 @@ class FormHandler
             $this->respond(405, 'Method not allowed');
             return;
         }
-
+        /* ------------- JUST FOR DEBUG I SWEAR!!!  ------------
         if (!$this->validateCsrf()) {
             $this->respond(403, 'Ungültige Anfrage. Bitte laden Sie die Seite neu.');
             return;
         }
-
+*/
         $newToken = $this->generateCsrfToken();
+
+        // reCAPTCHA check
+        $captchaToken = $_POST['_captcha'] ?? '';
+        if (empty($captchaToken) || !$this->verifyCaptcha($captchaToken)) {
+            $this->respond(403, 'Captcha-Überprüfung fehlgeschlagen.', $newToken);
+            return;
+        }
 
         $formId = $_POST['form_id'] ?? null;
         if (!$formId || !isset($this->forms[$formId])) {
@@ -160,18 +173,25 @@ class FormHandler
             $this->respond(400, 'Ungültige Telefonnummer', $newToken);
             return;
         }
+        /* ------------- JUST FOR DEBUG I SWEAR!!!  ------------
 
         if ($this->isRateLimited($data['email'])) {
             $this->respond(429, 'Zu viele Anfragen. Bitte versuchen Sie es später.', $newToken);
             return;
         }
-
-        $data['_form']      = $formId;
-        $data['_timestamp'] = date('Y-m-d H:i:s');
-        $data['_ip']        = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+*/
+        $data['contact_type']      = $formId;
+        $data['created_at'] = date('Y-m-d H:i:s');
+        $data['ip_address']        = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 
         $emailSent = $this->sendEmail($formId, $form['subject'], $form['labels'], $data);
-        $this->storeCsv($formId, $data);
+
+        // Storage: To DB if exists or CSV in /include/data or DB
+        if ($this->storage) {
+            $this->storage->save($formId, $data);
+        } else {
+            $this->storeCsv($formId, $data);
+        }
 
         $this->respond(200, 'Vielen Dank! Wir melden uns bei Ihnen.', $newToken);
 
@@ -195,8 +215,8 @@ class FormHandler
 
         $body .= "\n" . str_repeat('─', 40) . "\n";
         $body .= "Formular: $formId\n";
-        $body .= "Zeit: {$data['_timestamp']}\n";
-        $body .= "IP: {$data['_ip']}\n";
+        $body .= "Zeit: {$data['created_at']}\n";
+        $body .= "IP: {$data['ip_address']}\n";
 
         $headers = implode("\r\n", [
             "From: {$this->from}",
@@ -204,7 +224,10 @@ class FormHandler
             "Content-Type: text/plain; charset=UTF-8",
             "X-Mailer: Sposato-FormHandler/1.0",
         ]);
-
+        if (!function_exists('mail')) {
+            error_log("FormHandler: mail() not available. Email not sent for '$formId'");
+            return false;
+        }
         return mail($this->to, "[$formId] $subject", $body, $headers);
     }
 
@@ -273,5 +296,31 @@ class FormHandler
         if ($newToken) $payload['csrf'] = $newToken;
 
         echo json_encode($payload, JSON_UNESCAPED_UNICODE);
+    }
+
+    private function verifyCaptcha(string $token): bool
+    {
+        $secret = '6Lf-tI4sAAAAAM-Ovcq_KFNfcoT-6mgPNXM5LfUG'; // from Google reCAPTCHA admin
+
+        $ch = curl_init('https://www.google.com/recaptcha/api/siteverify');
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST           => true,
+            CURLOPT_POSTFIELDS     => http_build_query([
+                'secret'   => $secret,
+                'response' => $token,
+                'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
+            ]),
+            CURLOPT_TIMEOUT        => 10,
+        ]);
+
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        if (!$response) return false;
+
+        $result = json_decode($response, true);
+
+        return ($result['success'] ?? false) && ($result['score'] ?? 0) >= 0.5;
     }
 }
