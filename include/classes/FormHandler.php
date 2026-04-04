@@ -13,6 +13,8 @@ class FormHandler
     private string $csvDir;
     private array  $forms;
 
+    private string $recaptchaSecret;
+
     public function __construct(array $config)
     {
         if (session_status() === PHP_SESSION_NONE) {
@@ -22,6 +24,7 @@ class FormHandler
         $this->to     = $config['to']      ?? 'info@sposato.ch';
         $this->from   = $config['from']    ?? 'noreply@sposato.ch';
         $this->csvDir = $config['csv_dir'] ?? $_SERVER['DOCUMENT_ROOT'] . '/include/data';
+        $this->recaptchaSecret = $config['recaptcha_secret'] ?? '';
 
         $this->forms = [
             'reparatur' => [
@@ -107,12 +110,10 @@ class FormHandler
             $this->respond(405, 'Method not allowed');
             return;
         }
-        /* ------------- JUST FOR DEBUG I SWEAR!!!  ------------
         if (!$this->validateCsrf()) {
             $this->respond(403, 'Ungültige Anfrage. Bitte laden Sie die Seite neu.');
             return;
         }
-*/
         $newToken = $this->generateCsrfToken();
 
         // reCAPTCHA check
@@ -173,13 +174,12 @@ class FormHandler
             $this->respond(400, 'Ungültige Telefonnummer', $newToken);
             return;
         }
-        /* ------------- JUST FOR DEBUG I SWEAR!!!  ------------
 
         if ($this->isRateLimited($data['email'])) {
             $this->respond(429, 'Zu viele Anfragen. Bitte versuchen Sie es später.', $newToken);
             return;
         }
-*/
+
         $data['contact_type']      = $formId;
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['ip_address']        = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
@@ -300,7 +300,7 @@ class FormHandler
 
     private function verifyCaptcha(string $token): bool
     {
-        $secret = '6Lf-tI4sAAAAAM-Ovcq_KFNfcoT-6mgPNXM5LfUG'; // from Google reCAPTCHA admin
+        $secret = $this->recaptchaSecret;
 
         $ch = curl_init('https://www.google.com/recaptcha/api/siteverify');
         curl_setopt_array($ch, [

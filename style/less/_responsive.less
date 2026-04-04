@@ -12,6 +12,20 @@
   .stat-label { font-size: 14px; }
   .parallax-section { padding: 4rem 0; min-height: 20rem; }
 }
+@media (max-width: @screen_xxs) {
+  .brand-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .brand-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  .brand-item img {
+    height: 45px;
+  }
+}
 @media (max-width: @screen_xs) {
   .brand-list { gap: 30px; }
 }

@@ -29,8 +29,8 @@
                      data-lng="<?= $configInfo['lng'] ?>"
                      data-company="<?= $configInfo['name'] ?>"
                      data-address="<?= $configInfo['address'] ?>"
-                     data-city="<?= $configInfo['postal_code'] ?> <?= $configInfo['city'] ?>">>
-                     data-country="<?= $configInfo['country'] ?>">>
+                     data-city="<?= $configInfo['postal_code'] ?> <?= $configInfo['city'] ?>"
+                     data-country="<?= $configInfo['country'] ?>">
                 </div>
             </div>
         </div>

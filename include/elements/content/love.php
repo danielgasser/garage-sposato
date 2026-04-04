@@ -12,8 +12,8 @@
                     <div class="mt-auto pt-4">
 
                         <a href="#" class="btn btn-sposato mt-4" data-modal-target="modalAnrufen">
-                            <i data-lucide="heart"></i>
-                            <span>Rufen Sie uns an</span>
+                            <i data-lucide="phone"></i>
+                            <span>Anrufenn</span>
                         </a>
                     </div>
                 </div>

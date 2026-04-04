@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Get reCAPTCHA token
             let captchaToken = '';
             try {
-                captchaToken = await grecaptcha.execute('6Lf-tI4sAAAAAEC5KwgJDJjdLiCXsDI2cYA10DyL', {
+                captchaToken = await grecaptcha.execute(window.RECAPTCHA_SITE_KEY, {
                     action: form.dataset.formId
                 });
 
