@@ -9,11 +9,7 @@
             <div class="col-lg-4 d-flex flex-column">
                 <h2 class="heading-lg">Wir sind hier</h2>
                 <p class="text-body mt-3">
-                    <?= $configInfo['name'] ?><br>
-                    <?= $configInfo['address'] ?><br>
-                    <?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?><br>
-                    <?= $configInfo['country'] ?><br><br>
-                    <a href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
+                    <?= $configInfo['name'] ?><br><?= $configInfo['address'] ?><br><?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?><br><?= $configInfo['country'] ?><br><br><a href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
                 </p>
                 <div class="mt-auto pt-4">
                     <a href="https://www.google.com/maps/dir/?api=1&destination=' . <?= $configInfo['lat'] ?> . ',' .  <?= $configInfo['lng'] ?>"
