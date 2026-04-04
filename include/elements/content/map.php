@@ -12,7 +12,7 @@
                     <?= $configInfo['name'] ?><br><?= $configInfo['address'] ?><br><?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?><br><?= $configInfo['country'] ?><br><br><a href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
                 </p>
                 <div class="mt-auto pt-4">
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=' . <?= $configInfo['lat'] ?> . ',' .  <?= $configInfo['lng'] ?>"
+                    <a href="https://www.google.com/maps/dir/?api=1&destination='<?= $configInfo['lat'] ?>,<?= $configInfo['lng'] ?>"
                        target="_blank" class="btn btn-sposato">
                         <span><i data-lucide="navigation"></i>Route planen</span>
                     </a>

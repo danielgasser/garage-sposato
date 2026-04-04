@@ -21,6 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    document.querySelectorAll('select[name="service_type"]').forEach(select => {
+        const otherField = select.closest('.row').querySelector('.service-other-field');
+        if (!otherField) return;
+
+        select.addEventListener('change', () => {
+            if (select.value === 'Anderes') {
+                otherField.style.display = '';
+                otherField.querySelector('input').setAttribute('required', '');
+            } else {
+                otherField.style.display = 'none';
+                otherField.querySelector('input').removeAttribute('required');
+                otherField.querySelector('input').value = '';
+                otherField.querySelector('input').classList.remove('is-invalid');
+            }
+        });
+    });
     // ─── Form submission ────────────────────────────
 
     document.querySelectorAll('.sposato-form').forEach(form => {

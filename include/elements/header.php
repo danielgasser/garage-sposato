@@ -17,7 +17,7 @@
     <meta property="og:title" content="Garage Sposato">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Erfahren, zuverlässig und gut. Seit über 27 Jahren">
-    <meta property="og:image" content="images/card.jpg">
+    <meta property="og:image" content="assets/images/Werkzeugwand.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">

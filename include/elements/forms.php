@@ -188,7 +188,7 @@
                                         <option value="Anderes">Anderes</option>
                                     </select>
                                 </div>
-                                <div class="col-md-12 brand-other-field" style="display:none;">
+                                <div class="col-md-12 service-other-field" style="display:none;">
                                     <label class="form-label">Anderes *</label>
                                     <input type="text" class="form-control" name="service_type_other">
                                 </div>

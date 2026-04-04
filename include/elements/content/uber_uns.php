@@ -1,7 +1,7 @@
 <?php
 ?>
 
-<section class="section" id="kontakt">
+<section class="section" id="uberuns">
     <div class="container-xl">
         <div class="row g-5">
             <div class="col-lg-12">

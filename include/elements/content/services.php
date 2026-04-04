@@ -30,10 +30,10 @@
                 </ul>
                 <div class="mt-auto pt-4">
 
-                    <button class="btn btn-sposato btn-sposato-50 mt-4" data-modal-target="modalReparatur">
+                    <a href="#" class="btn btn-sposato btn-sposato-50 mt-4" data-modal-target="modalReparatur">
 
                         <span><i data-lucide="calendar"></i>Termin vereinbaren</span>
-                    </button>
+                    </a>
                     <a href="#" class="btn btn-sposato btn-sposato-50 mt-4" data-modal-target="modalAnrufen">
 
                         <span><i data-lucide="phone"></i>Anrufen</span>

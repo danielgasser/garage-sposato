@@ -34,7 +34,7 @@
             <div class="col-lg-4">
                 <h3 class="footer-title">Öffnungszeiten</h3>
                 <ul class="footer-hours">
-                    <li><span>Mo – Fr</span><span>08:00 – 12:00 / 13:30 – 17:30</span></li>
+                    <li><span>Mo – Fr</span><span>08:00 – 12:00 / 13:30 – 17:00</span></li>
                     <li><span>Samstag</span><span>Geschlossen</span></li>
                     <li><span>Sonntag</span><span>Geschlossen</span></li>
                 </ul>
@@ -57,12 +57,12 @@
 
 <?php include 'include/elements/forms.php'; ?>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/gallery.js"></script>
-<script src="js/map.js"></script>
-<script src="js/forms.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/gallery.js" defer></script>
+<script src="js/map.js" defer></script>
+<script src="js/forms.js" defer></script>
 <script>lucide.createIcons();</script>
