@@ -129,6 +129,17 @@ document.addEventListener('DOMContentLoaded', () => {
             },
 
         });
+        if (typeof GLightbox !== 'undefined') {
+            GLightbox({
+                selector: '.glightbox',
+                touchNavigation: true,
+                closeButton: true,
+                closeOnOutsideClick: true,
+                zoomable: false,
+                loop: true,
+                draggable: false,
+            });
+        }
     }
     /* --- Leaflet Map --- */
     const mapEl = document.getElementById('map');

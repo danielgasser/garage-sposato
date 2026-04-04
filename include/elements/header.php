@@ -1,6 +1,5 @@
 <?php
 $configData  = require $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
-
 ?>
 
 <head>
@@ -23,7 +22,7 @@ $configData  = require $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <link href="style/css/styles.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>

@@ -48,14 +48,21 @@
       }
     }
   }
+  .glightbox-container .gslide-image img {
+    cursor: pointer;
+    pointer-events: all;
+  }
 }
 
 
 @media (max-width: @screen_sm) {
   .gallery-swiper .swiper-slide img {
-    height: 250px;
+    height: auto;
+    width: 100%;
   }
-
+  #bilder .card-sposato {
+    padding: 0.5rem;
+  }
   .gallery-swiper .swiper-button-prev,
   .gallery-swiper .swiper-button-next {
     display: none;
