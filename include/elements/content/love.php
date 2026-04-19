@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 d-flex flex-column">
-                    <img src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/S-Sposato-bei-der-Arbeit.webp"
+                    <img src="assets/images/S-Sposato-bei-der-Arbeit.webp"
                          alt="Der Inhaber bei der Arbeit"
                          class="img-fluid rounded">
                 </div>

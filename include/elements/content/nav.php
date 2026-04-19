@@ -4,7 +4,7 @@
 <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-xl">
         <a class="navbar-brand" href="<?= str_replace('index.php', '', $_SERVER['PHP_SELF']) ?>">
-            <img src="">
+            <img alt="Garage Sposato" src="/assets/images/logos/Sposato_Garage_w_s.webp">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Menu">

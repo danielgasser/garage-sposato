@@ -29,7 +29,7 @@
                         <h3>Reparatur anmelden</h3>
                         <p class="text-body mb-4">Beschreiben Sie uns kurz Ihr Problem – wir kümmern uns darum.</p>
                         <img style="width: 100%; height: auto; margin: 5% 5% 5% 0;" alt="Empfang"
-                             src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/Werkzeug-vor-Fenster.webp">
+                             src="assets/images/Werkzeug-vor-Fenster.webp">
                     </div>
                     <div class="col-lg-7">
 
@@ -122,7 +122,7 @@
                         <h2 class="heading-lg mb-4">Service anmelden</h2>
                         <p class="text-body mb-4">Regelmässiger Service hält Ihr Auto jung.</p>
                         <img style="width: 100%; height: auto; margin: 5% 5% 5% 0;" alt="Empfang"
-                             src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/Lift_Nummer_1.webp">
+                             src="assets/images/Lift_Nummer_1.webp">
                     </div>
                     <div class="col-lg-7">
                         <form class="sposato-form" data-form-id="service" data-feedback="feedback-service" novalidate>
@@ -230,7 +230,7 @@
                         <h3>Pneuwechsel anmelden</h3>
                         <p class="text-body mb-4">Sommer- oder Winterreifen – wir wechseln schnell und fachgerecht.</p>
                         <img style="width: 100%; height: auto; margin: 5% 5% 5% 0;" alt="Pneuwechsel"
-                             src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/Lift_Nummer_1.webp">
+                             src="assets/images/Lift_Nummer_1.webp">
                     </div>
                     <div class="col-lg-7">
                         <form class="sposato-form" data-form-id="pneu" data-feedback="feedback-pneu" novalidate>

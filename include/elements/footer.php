@@ -82,6 +82,8 @@
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/popup.php'; ?>
 
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/cookie_banner.php'; ?>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>

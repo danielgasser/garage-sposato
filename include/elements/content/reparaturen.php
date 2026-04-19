@@ -1,6 +1,3 @@
-<?php
-var_dump($_SERVER['DOCUMENT_ROOT']);
-?>
 <?= $_SERVER['DOCUMENT_ROOT'] . '/assets/images/gallery/Lift%20Nummer%201.webp' ?>
 <section class="section" id="reparatur">
     <div class="container-xl">
@@ -33,7 +30,7 @@ var_dump($_SERVER['DOCUMENT_ROOT']);
             </div>
             <div class="col-lg-6 d-flex flex-column"
             ><img
-                        src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/gallery/Lift%20Nummer%201.webp"
+                        src="assets/images/gallery/Lift%20Nummer%201.webp"
                         alt="Voll ausgerüstete Werkstatt"
                         class="img-fluid rounded">
                 <p class="text-body">Wir sind auf folgende Marken spezialisert:</p>
@@ -41,22 +38,22 @@ var_dump($_SERVER['DOCUMENT_ROOT']);
                 <ul class="brand-list">
                     <li class="brand-item">
                         <img alt="VW"
-                             src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/auto_brands/VW_Logo_farbig.png">
+                             src="assets/images/auto_brands/VW_Logo_farbig.png">
                         <span class="brand-name">VW</span>
                     </li>
                     <li class="brand-item">
                         <img alt="Seat"
-                             src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/auto_brands/SEAT_Logo_farbig.png">
+                             src="assets/images/auto_brands/SEAT_Logo_farbig.png">
                         <span class="brand-name">Seat</span>
                     </li>
                     <li class="brand-item">
                         <img alt="Audi"
-                             src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/auto_brands/AUDI_Logo_farbig.png">
+                             src="assets/images/auto_brands/AUDI_Logo_farbig.png">
                         <span class="brand-name">Audi</span>
                     </li>
                     <li class="brand-item">
                         <img alt="Skoda"
-                             src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/auto_brands/SKODA_logo_farbig.svg">
+                             src="assets/images/auto_brands/SKODA_logo_farbig.svg">
                         <span class="brand-name">Skoda</span>
                     </li>
                 </ul>
