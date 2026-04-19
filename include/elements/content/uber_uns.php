@@ -41,7 +41,7 @@
                 <h2 class="heading-lg">Team</h2>
 
                 <h2 class="subtitle">Salvatore Sposato</h2>
-                <p class="text-body mt-3">Inhaber, etc</p>
+                <p class="text-body mt-3">Inhaber & Geschäftsführer</p>
                 <p class="text-body mt-3">
                     <img class="img-fluid rounded profile" alt="Salvatore Sposato"
                          src="assets/images/team/Salvatore Sposato.png">

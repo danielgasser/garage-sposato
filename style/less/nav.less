@@ -3,33 +3,45 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 139, 0.1);
+  padding: 0;
+
   .navbar-brand {
     color: @color_secondary;
     font-weight: 600;
     font-size: 1.25rem;
+
     &:hover {
       border-bottom: none !important;
     }
   }
-  .nav-link {
-    color: @color_special !important;
-    font-weight: 400;
-    font-size: 1.35rem;
-    padding: 1.25rem 1.75rem !important;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    &:hover {
-      background-color: @color_secondary;
-      color: @color_black !important;
+
+  .nav-item {
+    .nav-link {
+      color: @color_special !important;
+      font-weight: 400;
+      font-size: 1.35rem;
+      padding: 1.25rem 1.75rem;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      height: 70px;
+      &:hover {
+        background-color: @color_secondary;
+        color: @color_black !important;
+        border: none !important;
+      }
     }
   }
+
+
   .navbar-toggler {
     border-color: @border_color_1;
   }
+
   .navbar-collapse {
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
   }
 }
+
 @media (min-width: 992px) {
   #navbar {
     .navbar-collapse {

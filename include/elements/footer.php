@@ -40,6 +40,7 @@
                     <li><span>Samstag</span><span>Geschlossen</span></li>
                     <li><span>Sonntag</span><span>Geschlossen</span></li>
                 </ul>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/opening_hours.php'; ?>
 
             </div>
         </div>
@@ -59,9 +60,9 @@
     </div>
 </footer>
 
-<?php include 'include/elements/forms.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/forms.php'; ?>
 
-<?php include 'include/elements/popup.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/popup.php'; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>

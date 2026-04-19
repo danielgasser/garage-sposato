@@ -1,6 +1,6 @@
 <?php
 /**
- * @var $configData;
+ * @var $configData ;
  */
 ?>
 
@@ -8,7 +8,7 @@
     <script>
         window.RECAPTCHA_SITE_KEY = '<?= $configData['site']['recaptcha_site_key'] ?>';
     </script>
-    <script src="https://www.google.com/recaptcha/api.js?render=<?= $configData['form']['recaptcha_site_key'] ?>"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=<?= $configData['site']['recaptcha_site_key'] ?>"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Garage Sposato</title>
