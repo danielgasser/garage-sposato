@@ -5,8 +5,8 @@
  */
 $configData = require $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
 $configInfo = $configData['company'];
-require_once 'include/classes/FormHandler.php';
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/include/classes/FormHandler.php';
 $handler = new FormHandler([
     'to' => 'daniel@daniel-gasser.com',
     'from' => 'noreply@sposato.ch',

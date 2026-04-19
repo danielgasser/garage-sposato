@@ -21,7 +21,7 @@
                                 $alt = pathinfo($file, PATHINFO_FILENAME);
                                 $alt = str_replace(['-', '_'], ' ', $alt);
                                 $alt = ucfirst($alt);
-                                $src = 'assets/images/gallery/' . htmlspecialchars($file);
+                                $src = $_SERVER['DOCUMENT_ROOT'] . '/assets/images/gallery/' . htmlspecialchars($file);
 
                                 echo '<div class="swiper-slide">';
                                 echo '<a href="' . $src . '" class="glightbox" data-gallery="garage">';

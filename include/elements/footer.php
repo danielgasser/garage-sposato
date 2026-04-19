@@ -42,15 +42,34 @@
         </div>
 
         <div class="footer-bottom">
+
             <div class="container-xl d-flex justify-content-between align-items-center flex-wrap">
-                <p class="mb-0">&copy; <?= date('Y') ?> Garage Sposato. Alle Rechte vorbehalten. | Mit &hearts;
-                    geschmiedet
-                    von <a href="https://danielgasser.com" target="_blank">Daniel Gasser</a></p>
-                <div class="footer-legal">
-                    <a href="/impressum">Impressum</a>
-                    <a href="/datenschutz">Datenschutz</a>
-                    <a href="/agb">AGB</a>
+                <div class="row g-5">
+                    <!-- Column 1: Company info -->
+                    <div class="col-lg-6">
+                        <p class="mb-0">&copy; <?= date('Y') ?> Garage Sposato. Alle Rechte vorbehalten. | Mit &hearts;
+                            geschmiedet
+                            von <a href="https://danielgasser.com" target="_blank">Daniel Gasser</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="footer-legal">
+                            <a href="/impressum">Impressum</a>
+                            <a href="/datenschutz">Datenschutz</a>
+                            <a href="/agb">AGB</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="mb-0" style="text-align: center">
+                            Diese Website ist durch reCAPTCHA geschützt.
+                            Es gelten die <a href="https://policies.google.com/privacy" target="_blank">Datenschutzerklärung</a>
+                            und <a href="https://policies.google.com/terms" target="_blank">Nutzungsbedingungen</a> von
+                            Google.
+                        </p>
+                    </div>
                 </div>
+
+
             </div>
         </div>
     </div>

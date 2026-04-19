@@ -27,7 +27,7 @@
             </div>
             <div class="col-lg-6 d-flex flex-column"
             ><img
-                        src="assets/images/gallery/Werkzeug vor Fenster.webp"
+                        src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/gallery/Werkzeug vor Fenster.webp"
                         alt="Persönlich, kompetent und mit Herzblut"
                         class="img-fluid rounded">
             </div>
@@ -44,7 +44,7 @@
                 <p class="text-body mt-3">Inhaber & Geschäftsführer</p>
                 <p class="text-body mt-3">
                     <img class="img-fluid rounded profile" alt="Salvatore Sposato"
-                         src="assets/images/team/Salvatore Sposato.png">
+                         src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/team/Salvatore Sposato.png">
 
                 </p>
             </div>
@@ -55,7 +55,7 @@
                 <p class="text-body mt-3">
 
                     <img class="img-fluid rounded profile" alt="Marco [Nachname]"
-                         src="/assets/images/team/Marco%20Nachname.png">
+                         src="<?= $_SERVER['DOCUMENT_ROOT'] ?>/assets/images/team/Marco%20Nachname.png">
                 </p>
             </div>
 
