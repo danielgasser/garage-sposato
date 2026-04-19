@@ -11,7 +11,7 @@ class FormHandler
     private string $to;
     private string $from;
     private string $csvDir;
-    private array  $forms;
+    private array $forms;
 
     private string $recaptchaSecret;
 
@@ -21,54 +21,66 @@ class FormHandler
             session_start();
         }
 
-        $this->to     = $config['to']      ?? 'info@sposato.ch';
-        $this->from   = $config['from']    ?? 'noreply@sposato.ch';
+        $this->to = $config['to'] ?? 'info@sposato.ch';
+        $this->from = $config['from'] ?? 'noreply@sposato.ch';
         $this->csvDir = $config['csv_dir'] ?? $_SERVER['DOCUMENT_ROOT'] . '/include/data';
         $this->recaptchaSecret = $config['recaptcha_secret'] ?? '';
 
         $this->forms = [
             'reparatur' => [
-                'subject'  => 'Reparatur-Anmeldung',
-                'fields'   => ['name', 'email', 'phone', 'car_brand', 'car_model', 'year', 'license_plate', 'mileage', 'problem'],
+                'subject' => 'Reparatur-Anmeldung',
+                'fields' => ['name', 'email', 'phone', 'car_brand', 'car_model', 'year', 'license_plate', 'mileage', 'problem'],
                 'required' => ['name', 'email', 'phone', 'car_brand', 'problem'],
-                'labels'   => [
-                    'name'          => 'Name',
-                    'email'         => 'E-Mail',
-                    'phone'         => 'Telefon',
-                    'car_brand'     => 'Marke',
-                    'car_model'     => 'Modell',
-                    'year'          => 'Jahrgang',
+                'labels' => [
+                    'name' => 'Name',
+                    'email' => 'E-Mail',
+                    'phone' => 'Telefon',
+                    'car_brand' => 'Marke',
+                    'car_model' => 'Modell',
+                    'year' => 'Jahrgang',
                     'license_plate' => 'Kennzeichen',
-                    'mileage'       => 'Kilometerstand',
-                    'problem'       => 'Problembeschreibung',
+                    'mileage' => 'Kilometerstand',
+                    'problem' => 'Problembeschreibung',
                 ],
             ],
             'service' => [
-                'subject'  => 'Service-Anmeldung',
-                'fields'   => ['name', 'email', 'phone', 'car_brand', 'car_model', 'year', 'license_plate', 'mileage', 'service_type', 'preferred_date', 'message'],
+                'subject' => 'Service-Anmeldung',
+                'fields' => ['name', 'email', 'phone', 'car_brand', 'car_model', 'year', 'license_plate', 'mileage', 'service_type', 'preferred_date', 'message'],
                 'required' => ['name', 'email', 'phone', 'car_brand', 'service_type'],
-                'labels'   => [
-                    'name'           => 'Name',
-                    'email'          => 'E-Mail',
-                    'phone'          => 'Telefon',
-                    'car_brand'      => 'Marke',
-                    'car_model'      => 'Modell',
-                    'year'           => 'Jahrgang',
-                    'license_plate'  => 'Kennzeichen',
-                    'mileage'        => 'Kilometerstand',
-                    'service_type'   => 'Service-Art',
+                'labels' => [
+                    'name' => 'Name',
+                    'email' => 'E-Mail',
+                    'phone' => 'Telefon',
+                    'car_brand' => 'Marke',
+                    'car_model' => 'Modell',
+                    'year' => 'Jahrgang',
+                    'license_plate' => 'Kennzeichen',
+                    'mileage' => 'Kilometerstand',
+                    'service_type' => 'Service-Art',
                     'preferred_date' => 'Wunschtermin',
-                    'message'        => 'Bemerkungen',
+                    'message' => 'Bemerkungen',
+                ],
+            ],
+            'pneu' => [
+                'subject' => 'Pneuwechsel-Anmeldung',
+                'fields' => ['name', 'email', 'phone', 'car_brand', 'preferred_date'],
+                'required' => ['name', 'email', 'phone', 'car_brand'],
+                'labels' => [
+                    'name' => 'Name',
+                    'email' => 'E-Mail',
+                    'phone' => 'Telefon',
+                    'car_brand' => 'Marke',
+                    'preferred_date' => 'Wunschtermin',
                 ],
             ],
             'kontakt' => [
-                'subject'  => 'Kontaktanfrage',
-                'fields'   => ['name', 'email', 'phone', 'message'],
+                'subject' => 'Kontaktanfrage',
+                'fields' => ['name', 'email', 'phone', 'message'],
                 'required' => ['name', 'email', 'message'],
-                'labels'   => [
-                    'name'    => 'Name',
-                    'email'   => 'E-Mail',
-                    'phone'   => 'Telefon',
+                'labels' => [
+                    'name' => 'Name',
+                    'email' => 'E-Mail',
+                    'phone' => 'Telefon',
                     'message' => 'Nachricht',
                 ],
             ],
@@ -86,15 +98,15 @@ class FormHandler
     {
         $token = bin2hex(random_bytes(32));
         $_SESSION['csrf_token'] = $token;
-        $_SESSION['csrf_time']  = time();
+        $_SESSION['csrf_time'] = time();
         return $token;
     }
 
     private function validateCsrf(): bool
     {
-        $token  = $_POST['_csrf'] ?? '';
+        $token = $_POST['_csrf'] ?? '';
         $stored = $_SESSION['csrf_token'] ?? '';
-        $time   = $_SESSION['csrf_time'] ?? 0;
+        $time = $_SESSION['csrf_time'] ?? 0;
 
         if (empty($token) || empty($stored)) return false;
         if ((time() - $time) > 1800) return false;
@@ -180,9 +192,9 @@ class FormHandler
             return;
         }
 
-        $data['contact_type']      = $formId;
+        $data['contact_type'] = $formId;
         $data['created_at'] = date('Y-m-d H:i:s');
-        $data['ip_address']        = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+        $data['ip_address'] = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 
         $emailSent = $this->sendEmail($formId, $form['subject'], $form['labels'], $data);
 
@@ -237,11 +249,14 @@ class FormHandler
     {
         if (!is_dir($this->csvDir)) mkdir($this->csvDir, 0750, true);
 
-        $file   = $this->csvDir . "/{$formId}.csv";
-        $isNew  = !file_exists($file);
+        $file = $this->csvDir . "/{$formId}.csv";
+        $isNew = !file_exists($file);
         $handle = fopen($file, 'a');
 
-        if (!$handle) { error_log("FormHandler: Cannot open: $file"); return; }
+        if (!$handle) {
+            error_log("FormHandler: Cannot open: $file");
+            return;
+        }
 
         flock($handle, LOCK_EX);
         if ($isNew) fputcsv($handle, array_keys($data), ';');
@@ -255,18 +270,18 @@ class FormHandler
 
     private function isRateLimited(string $email): bool
     {
-        $dir  = $this->csvDir . '/.ratelimit';
+        $dir = $this->csvDir . '/.ratelimit';
         $file = $dir . '/' . md5(strtolower($email));
 
         if (!is_dir($dir)) mkdir($dir, 0750, true);
 
         $now = time();
-        $ts  = [];
+        $ts = [];
 
         if (file_exists($file)) {
             $raw = file_get_contents($file);
-            $ts  = $raw ? json_decode($raw, true) : [];
-            $ts  = array_filter($ts, fn($t) => ($now - $t) < 3600);
+            $ts = $raw ? json_decode($raw, true) : [];
+            $ts = array_filter($ts, fn($t) => ($now - $t) < 3600);
         }
 
         if (count($ts) >= 5) return true;
@@ -289,7 +304,7 @@ class FormHandler
         header('Content-Type: application/json; charset=utf-8');
 
         $payload = [
-            'status'  => $code < 400 ? 'success' : 'error',
+            'status' => $code < 400 ? 'success' : 'error',
             'message' => $message,
         ];
 
@@ -305,13 +320,13 @@ class FormHandler
         $ch = curl_init('https://www.google.com/recaptcha/api/siteverify');
         curl_setopt_array($ch, [
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_POST           => true,
-            CURLOPT_POSTFIELDS     => http_build_query([
-                'secret'   => $secret,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => http_build_query([
+                'secret' => $secret,
                 'response' => $token,
                 'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
             ]),
-            CURLOPT_TIMEOUT        => 10,
+            CURLOPT_TIMEOUT => 10,
         ]);
 
         $response = curl_exec($ch);

@@ -33,7 +33,8 @@
                     </div>
                     <div class="col-lg-7">
 
-                        <form class="sposato-form" data-form-id="reparatur" data-feedback="feedback-reparatur" novalidate>
+                        <form class="sposato-form" data-form-id="reparatur" data-feedback="feedback-reparatur"
+                              novalidate>
                             <input type="hidden" name="form_id" value="reparatur">
                             <input type="hidden" name="_csrf" value="<?= htmlspecialchars($csrfToken) ?>">
                             <!-- Honeypot -->
@@ -209,13 +210,83 @@
                             </div>
 
                         </form>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- ======== Pneuwechsel anmelden ======== -->
+<div class="sposato-modal" id="modalPneu">
+    <div class="sposato-modal-dialog">
+        <div class="sposato-modal-content">
+            <div class="sposato-modal-header">
+                <button type="button" class="btn-close"></button>
+                <div class="form-feedback" id="feedback-pneu"></div>
+            </div>
+            <div class="sposato-modal-body">
+                <div class="row g-5">
+                    <div class="col-lg-5">
+                        <h3>Pneuwechsel anmelden</h3>
+                        <p class="text-body mb-4">Sommer- oder Winterreifen – wir wechseln schnell und fachgerecht.</p>
+                        <img style="width: 100%; height: auto; margin: 5% 5% 5% 0;" alt="Pneuwechsel"
+                             src="../../assets/images/Lift_Nummer_1.webp">
+                    </div>
+                    <div class="col-lg-7">
+                        <form class="sposato-form" data-form-id="pneu" data-feedback="feedback-pneu" novalidate>
+                            <input type="hidden" name="form_id" value="pneu">
+                            <input type="hidden" name="_csrf" value="<?= htmlspecialchars($csrfToken) ?>">
+                            <div class="form-honeypot" aria-hidden="true">
+                                <input type="text" name="website" tabindex="-1" autocomplete="off">
+                            </div>
 
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="pneu-name">Name *</label>
+                                    <input type="text" class="form-control" id="pneu-name" name="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="pneu-email">E-Mail *</label>
+                                    <input type="email" class="form-control" id="pneu-email" name="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="pneu-phone">Telefon *</label>
+                                    <input type="tel" class="form-control" id="pneu-phone" name="phone" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="pneu-brand">Marke *</label>
+                                    <select class="form-select" id="pneu-brand" name="car_brand" required>
+                                        <option value="">Bitte wählen</option>
+                                        <option value="VW">VW</option>
+                                        <option value="Audi">Audi</option>
+                                        <option value="Seat">Seat</option>
+                                        <option value="Skoda">Skoda</option>
+                                        <option value="Andere">Andere</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 brand-other-field" style="display:none;">
+                                    <label class="form-label">Andere Marke *</label>
+                                    <input type="text" class="form-control" name="car_brand_other">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="pneu-date">Wunschtermin</label>
+                                    <input type="date" class="form-control" id="pneu-date" name="preferred_date">
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-sposato mt-2">
+                                        <span><i data-lucide="loader-pinwheel"
+                                                 class="icon"></i>Pneuwechsel anmelden</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- ======== Kontakt ======== -->
 <div class="sposato-modal" id="modalKontakt">
     <div class="sposato-modal-dialog">
@@ -230,7 +301,10 @@
                         <h2 class="heading-lg mb-4">Kontakt</h2>
                         <p class="text-body mb-4">Fragen, Anliegen oder einfach Hallo sagen.</p>
                         <p class="text-body mt-3">
-                            <?= $configInfo['name'] ?><br><?= $configInfo['address'] ?><br><?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?><br><?= $configInfo['country'] ?><br><br><a href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
+                            <?= $configInfo['name'] ?><br><?= $configInfo['address'] ?>
+                            <br><?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?>
+                            <br><?= $configInfo['country'] ?><br><br><a
+                                    href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
                         </p>
                     </div>
                     <div class="col-lg-7">
@@ -287,9 +361,9 @@
                 <i data-lucide="phone" style="width:48px; height:48px; stroke:#0A0A50; margin-bottom:1.5rem;"></i>
                 <h2 class="heading-lg" style="max-width:none; margin: 0 auto 0.5rem;">Rufen Sie uns an</h2>
                 <p class="text-body mb-4">Wir sind für Sie da.</p>
-                <a href="tel:<?= $configInfo['phone']?>" class="btn btn-sposato" style="justify-content:center;">
+                <a href="tel:<?= $configInfo['phone'] ?>" class="btn btn-sposato" style="justify-content:center;">
 
-                    <span><i data-lucide="phone" class="icon"></i><?= $configInfo['phone']?></span>
+                    <span><i data-lucide="phone" class="icon"></i><?= $configInfo['phone'] ?></span>
                 </a>
             </div>
         </div>

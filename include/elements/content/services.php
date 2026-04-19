@@ -4,7 +4,7 @@
 <section class="section" id="service">
     <div class="container-xl">
         <div class="row g-5">
-            <div class="col-lg-6">
+            <div class="col-lg-6 d-flex flex-column">
                 <h2 class="heading-lg">Service</h2>
                 <p class="subtitle">Vorsorge statt Pannenhilfe</p>
                 <p class="text-body mt-3">Ein regelmässiger Service ist die beste Investition in die Sicherheit und
@@ -20,7 +20,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 d-flex flex-column">
                 <h2 class="heading-lg">Pneuwechsel</h2>
                 <p class="subtitle">Sicher unterwegs in jeder Saison</p>
                 <p class="text-body mt-3">Ob Sommer- oder Winterreifen – der richtige Pneu zur richtigen Jahreszeit ist
@@ -30,8 +30,8 @@
                     ohne Aufwand startklar.</p>
                 <div class="mt-auto pt-4">
 
-                    <a href="#" class="btn btn-sposato mt-4" data-modal-target="modalService">
-                        <span><i data-lucide="wrench"></i>Service anmelden</span></a>
+                    <a href="#" class="btn btn-sposato mt-4" data-modal-target="modalPneu">
+                        <span><i data-lucide="loader-pinwheel"></i>Pneuwechsel anmelden</span></a>
                 </div>
             </div>
         </div>

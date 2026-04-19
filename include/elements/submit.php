@@ -18,8 +18,8 @@ try {
     http_response_code(500);
     echo json_encode([
         'status' => 'error',
-        // 'message' => 'FormHandler: ' . $e->getMessage() . ' in ' . $e->getFile() . ':' . $e->getLine(),
-        'message' => 'Serverfehler. Bitte versuchen Sie es später.',
+        'message' => 'FormHandler: ' . $e->getMessage() . ' in ' . $e->getFile() . ':' . $e->getLine(),
+        // 'message' => 'Serverfehler. Bitte versuchen Sie es später.',
     ]);
     error_log('FormHandler: ' . $e->getMessage() . ' in ' . $e->getFile() . ':' . $e->getLine());
 
