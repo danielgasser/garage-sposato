@@ -3,3 +3,4 @@
 /include/data/*
 config.php
 gitpush.sh
+.DS_Store
