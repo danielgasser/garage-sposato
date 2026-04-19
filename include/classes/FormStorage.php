@@ -23,9 +23,9 @@ class FormStorage
             );
 
             $this->db = new PDO($dsn, $config['user'] ?? '', $config['pass'] ?? '', [
-                PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                PDO::ATTR_EMULATE_PREPARES   => false,
+                PDO::ATTR_EMULATE_PREPARES => false,
             ]);
         } catch (PDOException $e) {
             error_log('FormStorage: DB connection failed: ' . $e->getMessage());
@@ -36,9 +36,9 @@ class FormStorage
     /**
      * Store a form submission.
      *
-     * @param string $formId   Form identifier (reparatur, service, kontakt)
-     * @param array  $data     Sanitized form data
-     * @param array  $coreFields Fields that map directly to table columns
+     * @param string $formId Form identifier (reparatur, service, kontakt)
+     * @param array $data Sanitized form data
+     * @param array $coreFields Fields that map directly to table columns
      * @return bool
      */
     public function save(string $formId, array $data): bool
@@ -83,26 +83,27 @@ class FormStorage
         ");
 
             $stmt->execute([
-                ':name'           => $data['name'] ?? '',
-                ':email'          => $data['email'] ?? '',
-                ':phone'          => $data['phone'] ?? '',
-                ':message'        => $data['message'] ?? $data['problem'] ?? '',
-                ':car_brand'      => $data['car_brand'] ?? null,
-                ':car_model'      => $data['car_model'] ?? null,
-                ':car_year'       => $data['year'] ?? null,
-                ':license_plate'  => $data['license_plate'] ?? null,
-                ':mileage'        => $data['mileage'] ?? null,
-                ':service_type'   => $data['service_type'] ?? null,
+                ':name' => $data['name'] ?? '',
+                ':email' => $data['email'] ?? '',
+                ':phone' => $data['phone'] ?? '',
+                ':message' => $data['message'] ?? $data['problem'] ?? '',
+                ':car_brand' => $data['car_brand'] ?? null,
+                ':car_model' => $data['car_model'] ?? null,
+                ':car_year' => $data['year'] ?? null,
+                ':license_plate' => $data['license_plate'] ?? null,
+                ':mileage' => $data['mileage'] ?? null,
+                ':service_type' => $data['service_type'] ?? null,
                 ':preferred_date' => $data['preferred_date'] ?? null,
-                ':contact_type'           => $formId,
-                ':created_at'           => $created_at,
-                ':ip_address'             => $data['ip_address'] ?? $_SERVER['REMOTE_ADDR'] ?? '',
+                ':contact_type' => $formId,
+                ':created_at' => $created_at,
+                ':ip_address' => $data['ip_address'] ?? $_SERVER['REMOTE_ADDR'] ?? '',
             ]);
 
             return true;
 
         } catch (PDOException $e) {
             error_log('FormStorage: Save failed: ' . $e->getMessage());
+            throw $e; // ← add this temporarily so FormHandler catches and reports it
             return false;
         }
     }

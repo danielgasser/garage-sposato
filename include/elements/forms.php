@@ -184,7 +184,6 @@
                                         <option value="Grosser Service">Grosser Service</option>
                                         <option value="Ölwechsel">Ölwechsel</option>
                                         <option value="Bremsen">Bremsen</option>
-                                        <option value="Reifenwechsel">Reifenwechsel</option>
                                         <option value="MFK Vorbereitung">MFK Vorbereitung</option>
                                         <option value="Anderes">Anderes</option>
                                     </select>

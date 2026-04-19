@@ -35,12 +35,8 @@
             <!-- Column 3: Opening hours + legal -->
             <div class="col-lg-4">
                 <h3 class="footer-title">Öffnungszeiten</h3>
-                <ul class="footer-hours">
-                    <li><span>Mo – Fr</span><span>08:00 – 12:00 / 13:30 – 17:00</span></li>
-                    <li><span>Samstag</span><span>Geschlossen</span></li>
-                    <li><span>Sonntag</span><span>Geschlossen</span></li>
-                </ul>
-                <?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/opening_hours.php'; ?>
+
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/opening_hours_compact.php'; ?>
 
             </div>
         </div>
