@@ -3,7 +3,7 @@
 <!-- ======== Navbar ======== -->
 <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-xl">
-        <a class="navbar-brand" href="#">Garage Sposato</a>
+        <a class="navbar-brand" href="<?= str_replace('index.php', '', $_SERVER['PHP_SELF']) ?>">Garage Sposato</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Menu">
             <span class="navbar-toggler-icon"></span>

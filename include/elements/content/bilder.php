@@ -1,10 +1,10 @@
 <?php
 ?>
 
-<section class="section-card" id="bilder">
+<section class="section-card" id="bilder" style="background-color: #F1F1F1">
     <div class="container-xl">
         <div class="card-sposato">
-            <div class="row g-5 align-items-center">
+            <div class="row g-5 align-items-stretch">
                 <div class="col-lg-8">
                     <?php
                     include "gallery.php";

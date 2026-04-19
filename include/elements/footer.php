@@ -61,6 +61,8 @@
 
 <?php include 'include/elements/forms.php'; ?>
 
+<?php include 'include/elements/popup.php'; ?>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>

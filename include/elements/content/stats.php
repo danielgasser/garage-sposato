@@ -7,7 +7,7 @@
             <div class="col-6 col-md-3 mb-4">
                 <div class="stat-item">
                     <i data-lucide="award"></i>
-                    <div class="stat-number" data-target="27">0</div>
+                    <div class="stat-number" data-target="45">0</div>
                     <div class="stat-label">Jahre Erfahrung</div>
                 </div>
             </div>

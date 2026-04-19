@@ -7,11 +7,17 @@
             <div class="row g-5 align-items-stretch">
                 <div class="col-lg-6 d-flex flex-column">
                     <h2 class="heading-lg">Bei uns wird Ihr Auto geliebt</h2>
-                    <p class="text-body mt-3">Seit mehr als 27 Jahren gilt unsere Leidenschaft Ihrem Auto.</p>
-                    <p class="text-body mt-3">Mit breitem Fachwissen, langjähriger Erfahrung und echter Leidenschaft kümmern wir uns um Ihr Fahrzeug – egal, ob es sich um eine Routinearbeit oder eine anspruchsvolle Reparatur handelt.</p>
-                    <p class="text-body mt-3">Uns ist es wichtig, dass Sie sich gut aufgehoben fühlen. Deshalb nehmen wir uns die Zeit, Ihnen unsere Arbeit zu erklären und Sie ehrlich zu beraten – ohne Fachjargon, ohne Umwege.</p>
-                    <p class="text-body mt-3">Ob Sie eine konkrete Frage haben oder einfach nicht sicher sind, was Ihr Fahrzeug braucht: Wir hören zu und finden gemeinsam die beste Lösung.</p>
-                    <p class="text-body mt-3">Bei uns ist Ihr Auto nicht einfach eine Nummer – es ist uns eine Herzensangelegenheit.</p>
+                    <p class="subtitle">Ihr Auto? Unser Baby. Wir lieben Autos. Auch Ihres.</p>
+                    <p class="text-body mt-3">Mit breitem Fachwissen, langjähriger Erfahrung und echter Leidenschaft
+                        kümmern wir uns um Ihr Fahrzeug – egal, ob es sich um eine Routinearbeit oder eine
+                        anspruchsvolle Reparatur handelt.</p>
+                    <p class="text-body mt-3">Uns ist es wichtig, dass Sie sich gut aufgehoben fühlen. Deshalb nehmen
+                        wir uns die Zeit, Ihnen unsere Arbeit zu erklären und Sie ehrlich zu beraten – ohne Fachjargon,
+                        ohne Umwege.</p>
+                    <p class="text-body mt-3">Ob Sie eine konkrete Frage haben oder einfach nicht sicher sind, was Ihr
+                        Fahrzeug braucht: Wir hören zu und finden gemeinsam die beste Lösung.</p>
+                    <p class="text-body mt-3">Bei uns ist Ihr Auto nicht einfach eine Nummer – es ist uns eine
+                        Herzensangelegenheit.</p>
                     <div class="mt-auto pt-4">
 
                         <a href="#" class="btn btn-sposato mt-4" data-modal-target="modalAnrufen">

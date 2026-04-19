@@ -1,5 +1,8 @@
 /* --- Base overrides --- */
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -9,38 +12,51 @@ html, body {
   padding: 0;
   overflow-x: hidden;
 }
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: @color_primary;
   background-color: @color_bg_plain;
 }
+
 /* --- Section spacing --- */
 .section {
   padding: 5rem 1.5rem;
 }
+
 .section-card {
   padding: 2rem 0;
 }
+
 /* --- Card (white bg containers) --- */
 .card-sposato {
   padding: 3rem;
 }
 
 .text-body {
-    img {
-      width: 100%;
-      border-radius: @card_radius;
-    }
+  img {
+    width: 100%;
+    border-radius: @card_radius;
+  }
 }
 
-#service, #bilder, #uberuns {
+#reparatur, #love, #location_opening_hours, #team {
   background-color: @color_bg_light;
 
 }
+
 #bilder {
   background-color: @color_bg_light;
 }
+
+.profile {
+  max-width: 66%;
+  height: auto;
+  border-radius: 100% !important;
+  border: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
 /* --- Stats --- */
 .stat-item svg {
   width: 50px;
@@ -48,12 +64,14 @@ body {
   stroke: @color_primary;
   margin: 0 auto 15px;
 }
+
 .stat-number {
   font-size: 42px;
   font-weight: bold;
   margin: 10px 0;
   color: @color_primary;
 }
+
 .stat-label {
   font-size: 18px;
   opacity: 0.9;
@@ -70,6 +88,7 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+
 .brand-item {
   text-align: center;
   display: flex;
@@ -77,10 +96,12 @@ body {
   align-items: center;
   gap: 10px;
 }
+
 .brand-item img {
   width: auto;
   height: 75px;
 }
+
 .brand-name {
   color: @color_primary;
   font-size: 1.05em;

@@ -8,11 +8,13 @@
                 <div class="row g-12">
 
                     <div class="col-lg-12 d-flex flex-column">
-                        <h2 class="heading-lg">Wir sind hier</h2>
+                        <h2 class="heading-lg">Unser Standort</h2>
+                        <p class="subtitle"><?= $configInfo['name'] ?></p>
+
                         <p class="text-body mt-3">
-                            <?= $configInfo['name'] ?><br><?= $configInfo['address'] ?>
-                            <br><?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?>
-                            <br><?= $configInfo['country'] ?><br><br><a
+                            <?= $configInfo['address'] ?>
+                            <br>CH-<?= $configInfo['postal_code'] ?>&nbsp;<?= $configInfo['city'] ?>
+                            <br><br><a
                                     href="tel:<?= $configInfo['phone'] ?>"><?= $configInfo['phone'] ?></a>
                         </p>
 
