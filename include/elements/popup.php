@@ -46,7 +46,6 @@ $ctaModal = htmlspecialchars($popup['cta_modal'] ?? '');
 $ctaHref = htmlspecialchars($popup['cta_href'] ?? '#');
 $maxWidth = htmlspecialchars($popup['max_width']);
 $delay = (int)$popup['delay_seconds'];
-$cookieDays = (int)$popup['cookie_days'];
 
 // Pass date strings to JS as ISO-like strings (no timezone suffix — JS parses as local time)
 $showFrom = addslashes($popup['show_from']);
@@ -102,7 +101,6 @@ $showUntil = addslashes($popup['show_until']);
     (function () {
         var COOKIE = 'sposato_popup_dismissed';
         var DELAY = <?= $delay ?> * 1000;
-        var DAYS = <?= $cookieDays ?>;
 
         // Parsed without timezone suffix → JS treats as device local time
         var FROM = new Date('<?= $showFrom ?>');
@@ -121,9 +119,7 @@ $showUntil = addslashes($popup['show_until']);
         }
 
         function setCookie(name, days) {
-            if (days <= 0) return;
-            var exp = new Date(Date.now() + days * 864e5).toUTCString();
-            document.cookie = name + '=1; expires=' + exp + '; path=/; SameSite=Lax';
+            document.cookie = name + '=1; path=/; SameSite=Lax';
         }
 
         function openPopup() {
@@ -140,7 +136,7 @@ $showUntil = addslashes($popup['show_until']);
             modal.classList.remove('show');
             modal.style.display = 'none';
             document.body.classList.remove('modal-open');
-            setCookie(COOKIE, DAYS);
+            setCookie(COOKIE);
         }
 
         function init() {

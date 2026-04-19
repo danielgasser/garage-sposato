@@ -1,5 +1,5 @@
 <?php
-$hours = require $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/data/opening_hours_data.php';
+$hours = require $_SERVER['DOCUMENT_ROOT'] . '/include/data/opening_hours_data.php';
 ?>
 <ul class="footer-hours">
     <?php foreach ($hours as $row): ?>

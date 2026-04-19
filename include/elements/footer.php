@@ -54,6 +54,9 @@
             </div>
         </div>
     </div>
+    <button class="scroll-top" id="scrollTop" aria-label="Nach oben">
+        <i data-lucide="arrow-up"></i>
+    </button>
 </footer>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/forms.php'; ?>

@@ -111,3 +111,37 @@ body {
   color: @color_primary;
   font-size: 1.05em;
 }
+
+.scroll-top {
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background: @color_primary;
+  border: 2px solid @color_bg_plain;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    stroke: @color_bg_plain;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.grecaptcha-badge {
+
+}

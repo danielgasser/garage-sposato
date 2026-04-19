@@ -1,6 +1,6 @@
 <?php
 
-$hours = require $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/data/opening_hours_data.php';
+$hours = require $_SERVER['DOCUMENT_ROOT'] . '/include/data/opening_hours_data.php';
 ?>
 
 <table class="opening-hours-table">

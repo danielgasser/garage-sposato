@@ -5,8 +5,8 @@
   background-position: center;
   background-size: cover;
   display: flex;
-  min-height: 41rem;
-  padding: 8rem 0 6rem;
+  min-height: 34rem;
+  padding: 6rem 0 4rem;
   position: relative;
   width: 100%;
 
@@ -48,27 +48,47 @@
    Responsive tweaks (Bootstrap handles grid)
    ============================================ */
 @media (max-width: 991.98px) {
-  .hero h1 { font-size: 3.5em; }
-  .hero h2 { font-size: 2.25em; }
+  .hero h1 {
+    font-size: 3.5em;
+  }
+
+  .hero h2 {
+    font-size: 2.25em;
+  }
 }
+
 @media (max-width: 767.98px) {
   .hero {
     min-height: 30rem;
     padding: 7rem 0 4rem;
   }
-  .hero h1 { font-size: 3em; }
-  .hero h2 { font-size: 2em; }
+
+  .hero h1 {
+    font-size: 3em;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
 }
+
 @media (max-width: 575.98px) {
-  .hero h1 { font-size: 2.5em; }
-  .hero h2 { font-size: 2.125em; }
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero h2 {
+    font-size: 2.125em;
+  }
 }
+
 /* --- iOS parallax fix --- */
 @supports (-webkit-touch-callout: none) {
   .hero {
     background-attachment: scroll;
   }
 }
+
 @media (max-width: 1280px) {
   .hero {
     background-attachment: scroll;
