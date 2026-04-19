@@ -1,4 +1,5 @@
 <?php
+// Opening hours
 return [
     ['day' => 'Montag', 'closed' => true],
     ['day' => 'Dienstag', 'closed' => false, 'am' => '08.00–12.00', 'pm' => '13.30–17.15'],
