@@ -21,7 +21,7 @@ class FormHandler
             session_start();
         }
 
-        $this->to = $config['to'] ?? 'info@sposato.ch';
+        $this->to = $config['to'] ?? 'garage@sposato.ch';
         $this->from = $config['from'] ?? 'noreply@sposato.ch';
         $this->csvDir = $config['csv_dir'] ?? $_SERVER['DOCUMENT_ROOT'] . '/include/data';
         $this->recaptchaSecret = $config['recaptcha_secret'] ?? '';

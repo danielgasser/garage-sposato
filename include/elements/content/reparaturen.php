@@ -1,4 +1,3 @@
-<?= $_SERVER['DOCUMENT_ROOT'] . '/assets/images/gallery/Lift%20Nummer%201.webp' ?>
 <section class="section" id="reparatur">
     <div class="container-xl">
         <div class="row g-5">

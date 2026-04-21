@@ -135,7 +135,16 @@
     transition: color 0.2s ease;
     padding: 0 1rem;
     border-right: 1px solid fade(@color_bg_plain, 30%);
+    border-bottom: none !important;
 
+    &:hover {
+      color: @color_bg_plain;
+      border-bottom: none !important;
+
+      span {
+        border-bottom: 1px solid @color_bg_plain;
+      }
+    }
     &:last-child {
       border-right: none;
       padding-right: 0;
@@ -147,6 +156,11 @@
 
     &:hover {
       color: @color_bg_plain;
+      border-bottom: none !important;
+
+      span {
+        border-bottom: 1px solid @color_bg_plain;
+      }
     }
   }
 }

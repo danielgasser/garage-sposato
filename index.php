@@ -5,11 +5,11 @@
  */
 $configData = require $_SERVER['DOCUMENT_ROOT'] . '/include/config.php';
 $configInfo = $configData['company'];
-
+$configForm = $configData['form'];
 require_once $_SERVER['DOCUMENT_ROOT'] . '/include/classes/FormHandler.php';
 $handler = new FormHandler([
-    'to' => 'daniel@daniel-gasser.com',
-    'from' => 'noreply@sposato.ch',
+    'to' => $configForm['to'],
+    'from' => $configForm['from'],
     'csv_dir' => $_SERVER['DOCUMENT_ROOT'] . '/include/data',
 ]);
 
@@ -59,14 +59,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/bilder.php';
 
 <!-- ======== Angebote & Öffnungszeiten ======== -->
 <?php
-//include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/map.php';
-?>
-<!-- ======== Angebote & Öffnungszeiten ======== -->
-<?php
 include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/location_opening_hours.php';
 ?>
 
-<!-- ======== Angebote & Öffnungszeiten ======== -->
+<!-- ======== Über uns ======== -->
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/content/uber_uns.php';
 ?>

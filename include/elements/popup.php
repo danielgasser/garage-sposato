@@ -15,9 +15,10 @@ $popup = [
     'enabled' => true,
 
     // ── Visibility window (device local time) ─────────
-    'show_from' => '2026-04-19 04:00',
-    'show_until' => '2026-04-30 23:59',
-
+    'windows' => [
+        ['from' => '03-30 01:00', 'until' => '05-31 23:59'], // Frühling
+        ['from' => '10-01 01:00', 'until' => '12-31 23:59'], // Herbst
+    ],
     // ── Timing ────────────────────────────────────────
     'delay_seconds' => 2,
     'cookie_days' => 7,
@@ -48,8 +49,13 @@ $maxWidth = htmlspecialchars($popup['max_width']);
 $delay = (int)$popup['delay_seconds'];
 
 // Pass date strings to JS as ISO-like strings (no timezone suffix — JS parses as local time)
-$showFrom = addslashes($popup['show_from']);
-$showUntil = addslashes($popup['show_until']);
+$windows = json_encode(array_map(function ($w) {
+    $year = date('Y');
+    return [
+        'from' => $year . '-' . $w['from'],
+        'until' => $year . '-' . $w['until'],
+    ];
+}, $popup['windows']));
 ?>
 
 <!-- ======== Promo Popup ======== -->
@@ -102,14 +108,13 @@ $showUntil = addslashes($popup['show_until']);
         var COOKIE = 'sposato_popup_dismissed';
         var DELAY = <?= $delay ?> * 1000;
 
-        // Parsed without timezone suffix → JS treats as device local time
-        var FROM = new Date('<?= $showFrom ?>');
-        var UNTIL = new Date('<?= $showUntil ?>');
-        console.log('FROM', FROM, 'UNTIL', UNTIL, 'now', new Date(), 'inWindow', inWindow(), 'cookie', getCookie(COOKIE));
+        var WINDOWS = <?= $windows ?>;
 
         function inWindow() {
             var now = new Date();
-            return now >= FROM && now <= UNTIL;
+            return WINDOWS.some(function (w) {
+                return now >= new Date(w.from) && now <= new Date(w.until);
+            });
         }
 
         function getCookie(name) {

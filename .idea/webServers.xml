@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="3e919ead-ba39-4a66-b85b-f52507cae63f" name="sposato_def" url="http://212.55.193.47">
+        <fileTransfer rootFolder="/httpdocs" host="212.55.193.47" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

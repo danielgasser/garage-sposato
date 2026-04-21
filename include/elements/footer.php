@@ -54,13 +54,13 @@
                     </div>
                     <div class="col-lg-6">
                         <p class="footer-legal">
-                            <a href="/impressum">Impressum</a>
-                            <a href="/datenschutz">Datenschutz</a>
-                            <a href="/agb">AGB</a>
+                            <a href="/impressum"><span>Impressum</span></a>
+                            <a href="/datenschutz"><span>Datenschutz</span></a>
+                            <a href="/agb"><span>AGB</span></a>
                         </p>
                     </div>
-                    <div class="col-lg-12">
-                        <p class="mb-0" style="text-align: center">
+                    <div class="col-lg-12" style="margin-top: 1rem;">
+                        <p class="mb-0" style="text-align: center; font-size: 0.65em;">
                             Diese Website ist durch reCAPTCHA geschützt.
                             Es gelten die <a href="https://policies.google.com/privacy" target="_blank">Datenschutzerklärung</a>
                             und <a href="https://policies.google.com/terms" target="_blank">Nutzungsbedingungen</a> von

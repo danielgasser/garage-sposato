@@ -37,21 +37,23 @@
 <section class="section" id="team">
     <div class="container-xl">
         <div class="row g-5">
-            <div class="col-lg-6">
+            <div class="col-lg-6 d-flex flex-column">
                 <h2 class="heading-lg">Team</h2>
 
                 <h2 class="subtitle">Salvatore Sposato</h2>
-                <p class="text-body mt-3">Inhaber & Geschäftsführer</p>
+                <p class="text-body mt-3">Inhaber & Geschäftsführer. Repariert Autos seit bald 50 Jahren! Ein echter
+                    Vollprofi.</p>
                 <p class="text-body mt-3">
                     <img class="img-fluid rounded profile" alt="Salvatore Sposato"
                          src="assets/images/team/Salvatore Sposato.png">
 
                 </p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 d-flex flex-column">
                 <h2 class="heading-lg">&nbsp;</h2>
-                <h2 class="subtitle">Marco [Nachname]</h2>
-                <p class="text-body mt-3">Mechaniker, spezialisiert auf</p>
+                <h2 class="subtitle">Marco Camanni</h2>
+                <p class="text-body mt-3">Ausgebildeter Automobilfachmann. Spezialisiert auf Diagnose und
+                    Störungssuche.</p>
                 <p class="text-body mt-3">
 
                     <img class="img-fluid rounded profile" alt="Marco [Nachname]"

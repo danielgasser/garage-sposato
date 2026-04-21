@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="sposato" createEmptyFolders="true" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="sposato_def" createEmptyFolders="true" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false" autoUploadExternalChanges="true" showAutoUploadSettingsWarning="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
       <paths name="sposato">
@@ -11,6 +11,20 @@
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/include/config.php" />
             <excludedPath path="/include/config.php" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="sposato_def">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/include/config.php" />
+            <excludedPath local="true" path="$PROJECT_DIR$/include/config.php" />
+            <excludedPath path="/.gitignore" />
+            <excludedPath local="true" path="$PROJECT_DIR$/gitpush.sh" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.gitignore" />
           </excludedPaths>
         </serverdata>
       </paths>
