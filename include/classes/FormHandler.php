@@ -84,6 +84,22 @@ class FormHandler
                     'message' => 'Nachricht',
                 ],
             ],
+            'aktion' => [
+                'subject' => 'Aktions-Anmeldung',
+                'fields' => ['firstname', 'lastname', 'email', 'phone', 'car_brand', 'car_model', 'year', 'mileage', 'license_plate', 'aktion_type'],
+                'required' => ['firstname', 'lastname', 'email', 'phone', 'car_brand'],
+                'labels' => [
+                    'firstname' => 'Vorname',
+                    'lastname' => 'Nachname',
+                    'email' => 'E-Mail',
+                    'phone' => 'Telefon',
+                    'car_model' => 'Modell',
+                    'year' => 'Baujahr',
+                    'mileage' => 'Kilometerstand',
+                    'license_plate' => 'Kontrollschild',
+                    'aktion_type' => 'Aktion',
+                ],
+            ],
         ];
     }
 
@@ -220,7 +236,7 @@ class FormHandler
         $body .= str_repeat('─', 40) . "\n\n";
 
         foreach ($data as $key => $value) {
-            if (str_starts_with($key, '_') || empty($value)) continue;
+            if (str_starts_with($key, '_') || empty($value) || in_array($key, ['contact_type', 'created_at', 'ip_address'])) continue;
             $label = $labels[$key] ?? ucfirst(str_replace('_', ' ', $key));
             $body .= "$label: $value\n";
         }

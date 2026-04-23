@@ -55,7 +55,10 @@
                     <div class="col-lg-6">
                         <p class="footer-legal">
                             <a href="/impressum"><span>Impressum</span></a>
-                            <a href="/datenschutz"><span>Datenschutz</span></a>
+                            <a href="https://www.iubenda.com/privacy-policy/62239619/cookie-policy"
+                               title="Cookie-Richtlinie "><span>Cookie-Richtlinie</span></a>
+                            <a href="https://www.iubenda.com/privacy-policy/62239619"
+                               title="Datenschutzerklärung "><span>Datenschutzerklärung</span></a>
                             <a href="/agb"><span>AGB</span></a>
                         </p>
                     </div>
@@ -81,8 +84,6 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/forms.php'; ?>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/popup.php'; ?>
-
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/elements/cookie_banner.php'; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>

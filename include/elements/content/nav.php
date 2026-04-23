@@ -17,7 +17,8 @@
                                                            style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i>Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-modal-target="modalKontakt"><i data-lucide="mail" ...></i>Kontakt</a>
+                    <a class="nav-link" href="#" data-modal-target="modalKontakt"><i data-lucide="mail"
+                                                                                     style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i>Kontakt</a>
 
                 </li>
                 <li class="nav-item">

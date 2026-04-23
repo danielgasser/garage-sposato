@@ -12,6 +12,7 @@
 
 $seasons = [
     'spring' => [
+        'name' => 'Frühlingsaktion',
         'months' => [4, 5, 6],
         'title' => 'Frühlings-Check Fr. 49.–<br>(für alle Automarken)',
         'body' => '<ul>
@@ -26,6 +27,7 @@ $seasons = [
         'cta_label' => 'Jetzt Termin buchen',
     ],
     'autumn' => [
+        'name' => 'Herbstaktion',
         'months' => [10, 11],
         'title' => 'Winter-Check Fr. 49.–<br>(für alle Automarken)',
         'body' => '<ul><li>Innenraum, u. a. Kontrollleuchten, Heizung, Gebläse, Klimaanlage</li>
@@ -58,7 +60,7 @@ $title = $activeSeason['title'];
 $body = $activeSeason['body'];
 $image = htmlspecialchars($activeSeason['image'] ?? '');
 $ctaLabel = $activeSeason['cta_label'];
-$ctaModal = 'modalService';
+$ctaModal = 'modalAktion';
 $ctaHref = '#';
 $maxWidth = '645px';
 $delay = 2;
@@ -153,7 +155,8 @@ $showUntil = addslashes($activeSeason['show_until']);
         function init() {
             if (getCookie(COOKIE)) return;
             if (!inWindow()) return;
-
+            document.getElementById('aktionType').value = '<?= $activeSeason['name'] ?>';
+            document.getElementById('aktionModalTitle').innerHTML = '<?= $activeSeason['name'] ?>';
             setTimeout(openPopup, DELAY);
 
             var closeBtn = document.getElementById('promoPopupClose');

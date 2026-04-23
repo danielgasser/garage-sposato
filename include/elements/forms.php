@@ -368,3 +368,93 @@
         </div>
     </div>
 </div>
+
+<!-- ======== Frühlings-/Herbstaktion ======== -->
+<div class="sposato-modal" id="modalAktion">
+    <div class="sposato-modal-dialog">
+        <div class="sposato-modal-content">
+            <div class="sposato-modal-header">
+                <button type="button" class="btn-close"></button>
+                <div class="form-feedback" id="feedback-aktion"></div>
+            </div>
+            <div class="sposato-modal-body">
+                <div class="row g-5">
+                    <div class="col-lg-5">
+                        <h2 class="heading-lg mb-4" id="aktionModalTitle"></h2>
+                        <p class="text-body mb-4">Sichern Sie sich jetzt Ihren Termin für unsere Saisonaktion.</p>
+                    </div>
+                    <div class="col-lg-7">
+                        <form class="sposato-form" data-form-id="aktion" data-feedback="feedback-aktion" novalidate>
+                            <input type="hidden" name="form_id" value="aktion">
+                            <input type="hidden" name="service_type" id="aktionType"
+                                   value=">">
+                            <input type="hidden" name="_csrf" value="<?= htmlspecialchars($csrfToken) ?>">
+                            <div class="form-honeypot" aria-hidden="true">
+                                <label for="website"></label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="akt-firstname">Vorname *</label>
+                                    <input type="text" class="form-control" id="akt-firstname" name="firstname"
+                                           required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="akt-lastname">Nachname *</label>
+                                    <input type="text" class="form-control" id="akt-lastname" name="lastname" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="akt-email">E-Mail *</label>
+                                    <input type="email" class="form-control" id="akt-email" name="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="akt-phone">Telefon *</label>
+                                    <input type="tel" class="form-control" id="akt-phone" name="phone" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="akt-brand">Marke *</label>
+                                    <select class="form-select" id="akt-brand" name="car_brand" required>
+                                        <option value="">Bitte wählen</option>
+                                        <option value="VW">VW</option>
+                                        <option value="Audi">Audi</option>
+                                        <option value="Seat">Seat</option>
+                                        <option value="Skoda">Skoda</option>
+                                        <option value="Andere">Andere</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 brand-other-field" style="display:none;">
+                                    <label class="form-label">Andere Marke *</label>
+                                    <input type="text" class="form-control" name="car_brand_other">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="svc-model">Modell</label>
+                                    <input type="text" class="form-control" id="akt-model" name="car_model">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="akt-year">Baujahr</label>
+                                    <input type="text" class="form-control" id="akt-year" name="year" maxlength="4"
+                                           placeholder="z.B. 2019">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="akt-mileage">Kilometerstand</label>
+                                    <input type="text" class="form-control" id="akt-mileage" name="mileage">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="akt-plate">Kontrollschild</label>
+                                    <input type="text" class="form-control" id="akt-plate" name="license_plate"
+                                           placeholder="z.B. ZH 12345">
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-sposato mt-2">
+                                        <span><i data-lucide="tag" class="icon"></i>Jetzt anmelden</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
