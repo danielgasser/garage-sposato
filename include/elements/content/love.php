@@ -30,6 +30,10 @@
                     <img src="assets/images/S-Sposato-bei-der-Arbeit.webp"
                          alt="Der Inhaber bei der Arbeit"
                          class="img-fluid rounded">
+                    <br>
+                    <img src="assets/images/Marco bei der Diagnose.webp"
+                         alt="Der Inhaber bei der Arbeit"
+                         class="img-fluid rounded">
                 </div>
             </div>
         </div>

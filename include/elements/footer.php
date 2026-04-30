@@ -55,10 +55,38 @@
                     <div class="col-lg-6">
                         <p class="footer-legal">
                             <a href="/impressum"><span>Impressum</span></a>
-                            <a href="https://www.iubenda.com/privacy-policy/62239619/cookie-policy"
+                            <a target="_blank" href="https://www.iubenda.com/privacy-policy/62239619/cookie-policy"
                                title="Cookie-Richtlinie "><span>Cookie-Richtlinie</span></a>
-                            <a href="https://www.iubenda.com/privacy-policy/62239619"
+                            <script type="text/javascript">(function (w, d) {
+                                    var loader = function () {
+                                        var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
+                                        s.src = "https://cdn.iubenda.com/iubenda.js";
+                                        tag.parentNode.insertBefore(s, tag);
+                                    };
+                                    if (w.addEventListener) {
+                                        w.addEventListener("load", loader, false);
+                                    } else if (w.attachEvent) {
+                                        w.attachEvent("onload", loader);
+                                    } else {
+                                        w.onload = loader;
+                                    }
+                                })(window, document);</script>
+                            <a target="_blank" href="https://www.iubenda.com/privacy-policy/62239619"
                                title="Datenschutzerklärung "><span>Datenschutzerklärung</span></a>
+                            <script type="text/javascript">(function (w, d) {
+                                    var loader = function () {
+                                        var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
+                                        s.src = "https://cdn.iubenda.com/iubenda.js";
+                                        tag.parentNode.insertBefore(s, tag);
+                                    };
+                                    if (w.addEventListener) {
+                                        w.addEventListener("load", loader, false);
+                                    } else if (w.attachEvent) {
+                                        w.attachEvent("onload", loader);
+                                    } else {
+                                        w.onload = loader;
+                                    }
+                                })(window, document);</script>
                             <a href="/agb"><span>AGB</span></a>
                         </p>
                     </div>

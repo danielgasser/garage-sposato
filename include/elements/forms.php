@@ -121,7 +121,7 @@
                     <div class="col-lg-5">
                         <h2 class="heading-lg mb-4">Service anmelden</h2>
                         <p class="text-body mb-4">Regelmässiger Service hält Ihr Auto jung.</p>
-                        <img style="width: 100%; height: auto; margin: 5% 5% 5% 0;" alt="Empfang"
+                        <img style="width: 100%; height: auto; margin: 5% 5% 5% 0;" alt="Autolift"
                              src="assets/images/Lift_Nummer_1.webp">
                     </div>
                     <div class="col-lg-7">

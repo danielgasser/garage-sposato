@@ -6,7 +6,7 @@
 
 <head>
     <script type="text/javascript"
-            src=https://embeds.iubenda.com/widgets/72b54858-2758-48f3-bf67-25696df44c34.js></script>
+            src="https://embeds.iubenda.com/widgets/72b54858-2758-48f3-bf67-25696df44c34.js"></script>
     <script type="text/javascript">(function (w, d) {
             var loader = function () {
                 var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
