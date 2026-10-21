@@ -11,11 +11,11 @@
  */
 
 $seasons = [
-    'spring' => [
-        'name' => 'Frühlingsaktion',
-        'months' => [4, 5, 6],
-        'title' => 'Frühlings-Check Fr. 49.–<br>(für alle Automarken)',
-        'body' => '<ul>
+        'spring' => [
+                'name' => 'Frühlingsaktion',
+                'months' => [4, 5, 6],
+                'title' => 'Frühlings-Check Fr. 49.–<br>(für alle Automarken)',
+                'body' => '<ul>
 <li>Innenraum, (u.a. Kontrollleuchten, Heizung, Gebläse, Klimaanlage)</li>
 <li>Motorraum, (u.a. Batterie, Motorölstand, Bremsflüssigkeit, Keil- und Rippenriemen)</li>
 <li>Fahrzeug-Unterseite, (u.a. Abgasanlage, Bremsen, Fahrwerk)</li>
@@ -23,22 +23,22 @@ $seasons = [
 <li>Karosserie, (u.a. Scheinwerfer, Steinschlag, Windschutzscheibe, Wischerblätter)</li>
 <li>Auf dem Lift (u.a. Unterboden, Stossdämpfer, Abgasanlage, Bremsen)</li>
 <li>Klimaanlage prüfen</li></ul>',
-        'image' => '',
-        'cta_label' => 'Jetzt Termin buchen',
-    ],
-    'autumn' => [
-        'name' => 'Herbstaktion',
-        'months' => [10, 11],
-        'title' => 'Winter-Check Fr. 49.–<br>(für alle Automarken)',
-        'body' => '<ul><li>Innenraum, u. a. Kontrollleuchten, Heizung, Gebläse, Klimaanlage</li>
+                'image' => '',
+                'cta_label' => 'Jetzt Termin buchen',
+        ],
+        'autumn' => [
+                'name' => 'Herbstaktion',
+                'months' => [10, 11],
+                'title' => 'Winter-Check Fr. 49.–<br>(für alle Automarken)',
+                'body' => '<ul><li>Innenraum, u. a. Kontrollleuchten, Heizung, Gebläse, Klimaanlage</li>
 <li>Motorraum, u. a. Batterie, Motorölstand, Bremsflüssigkeit</li>
 <li>Fahrzeug-Unterseite, u. a. Abgasanlage, Bremsen, Fahrwerk</li>
 <li>Bereifung, u. a. Profiltiefe, Luftdruck</li>
 <li>Karosserie, u. a. Scheinwerfer, Steinschlag, Windschutzscheibe, Wischerblätter</li>
 <li>Türgümmi schmieren</li></ul>',
-        'image' => '',
-        'cta_label' => 'Jetzt Termin buchen',
-    ],
+                'image' => '',
+                'cta_label' => 'Jetzt Termin buchen',
+        ],
 ];
 
 $currentMonth = (int)date('n');
@@ -114,87 +114,10 @@ $showUntil = addslashes($activeSeason['show_until']);
 </div>
 
 <script>
-    (function () {
-        var COOKIE = 'sposato_popup_dismissed';
-        var DELAY = <?= $delay ?> * 1000;
-        var FROM = new Date('<?= $showFrom ?>');
-        var UNTIL = new Date('<?= $showUntil ?>');
+    var COOKIE = 'sposato_popup_dismissed';
+    var DELAY = <?= $delay ?> * 1000;
+    var FROM = new Date('<?= $showFrom ?>');
+    var UNTIL = new Date('<?= $showUntil ?>');
+    var activeSeason = '<?= $activeSeason['name'] ?>';
 
-        function inWindow() {
-            var now = new Date();
-            return now >= FROM && now <= UNTIL;
-        }
-
-        function getCookie(name) {
-            return document.cookie.split('; ').some(function (c) {
-                return c.indexOf(name + '=') === 0;
-            });
-        }
-
-        function setCookie(name) {
-            document.cookie = name + '=1; path=/; SameSite=Lax';
-        }
-
-        function openPopup() {
-            var modal = document.getElementById('promoPopup');
-            if (!modal) return;
-            modal.classList.add('show');
-            modal.style.display = 'block';
-            document.body.classList.add('modal-open');
-        }
-
-        function closePopup() {
-            var modal = document.getElementById('promoPopup');
-            if (!modal) return;
-            modal.classList.remove('show');
-            modal.style.display = 'none';
-            document.body.classList.remove('modal-open');
-            setCookie(COOKIE);
-        }
-
-        function init() {
-            if (getCookie(COOKIE)) return;
-            if (!inWindow()) return;
-            document.getElementById('aktionType').value = '<?= $activeSeason['name'] ?>';
-            document.getElementById('aktionModalTitle').innerHTML = '<?= $activeSeason['name'] ?>';
-            setTimeout(openPopup, DELAY);
-
-            var closeBtn = document.getElementById('promoPopupClose');
-            if (closeBtn) closeBtn.addEventListener('click', closePopup);
-
-            var modal = document.getElementById('promoPopup');
-            if (modal) {
-                modal.addEventListener('click', function (e) {
-                    if (e.target === modal) closePopup();
-                });
-            }
-
-            var ctaBtn = document.getElementById('promoPopupCta');
-            if (ctaBtn) {
-                ctaBtn.addEventListener('click', function () {
-                    closePopup();
-                    var targetId = ctaBtn.dataset.modalTarget;
-                    var target = targetId ? document.getElementById(targetId) : null;
-                    if (target) {
-                        target.classList.add('show');
-                        target.style.display = 'block';
-                        document.body.classList.add('modal-open');
-                    }
-                });
-            }
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') {
-                    var open = document.getElementById('promoPopup');
-                    if (open && open.classList.contains('show')) closePopup();
-                }
-            });
-        }
-
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', init);
-        } else {
-            init();
-        }
-    }());
 </script>

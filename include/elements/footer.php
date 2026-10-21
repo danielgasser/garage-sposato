@@ -121,4 +121,5 @@
 <script src="js/gallery.js" defer></script>
 <script src="js/map.js" defer></script>
 <script src="js/forms.js" defer></script>
+<script src="js/popup.js" defer></script>
 <script>lucide.createIcons();</script>
