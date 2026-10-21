@@ -144,16 +144,16 @@ class FormHandler
         }
         $newToken = $this->generateCsrfToken();
 
-        // reCAPTCHA check
-        $captchaToken = $_POST['_captcha'] ?? '';
-        if (empty($captchaToken) || !$this->verifyCaptcha($captchaToken)) {
-            $this->respond(403, 'Captcha-Überprüfung fehlgeschlagen.', $newToken);
-            return;
-        }
-
         $formId = $_POST['form_id'] ?? null;
         if (!$formId || !isset($this->forms[$formId])) {
             $this->respond(400, 'Unbekanntes Formular', $newToken);
+            return;
+        }
+
+        // reCAPTCHA check
+        $captchaToken = $_POST['_captcha'] ?? '';
+        if (empty($captchaToken) || !$this->verifyCaptcha($captchaToken, $formId)) {
+            $this->respond(403, 'Captcha-Überprüfung fehlgeschlagen.', $newToken);
             return;
         }
 
@@ -329,7 +329,7 @@ class FormHandler
         echo json_encode($payload, JSON_UNESCAPED_UNICODE);
     }
 
-    private function verifyCaptcha(string $token): bool
+    private function verifyCaptcha(string $token, string $expectedAction): bool
     {
         $secret = $this->recaptchaSecret;
 
@@ -352,6 +352,8 @@ class FormHandler
 
         $result = json_decode($response, true);
 
-        return ($result['success'] ?? false) && ($result['score'] ?? 0) >= 0.5;
+        return ($result['success'] ?? false)
+            && ($result['score'] ?? 0) >= 0.5
+            && ($result['action'] ?? '') === $expectedAction;
     }
 }
