@@ -1,15 +1,4 @@
 <?php
-/**
- * Garage Sposato — Promo Popup
- *
- * Include in footer.php before </body>.
- * All settings live in $seasons below.
- *
- * cta_modal  → opens a .sposato-modal by id (e.g. 'modalService')
- * cta_href   → navigates to a URL (used when cta_modal is null)
- * cookie_days → 0 = show every visit, N = hide for N days after close
- */
-
 $seasons = [
         'spring' => [
                 'name' => 'Frühlingsaktion',
@@ -64,12 +53,14 @@ $ctaModal = 'modalAktion';
 $ctaHref = '#';
 $maxWidth = '645px';
 $delay = 2;
-$showFrom = addslashes($activeSeason['show_from']);
-$showUntil = addslashes($activeSeason['show_until']);
 ?>
 
 <!-- ======== Promo Popup ======== -->
-<div class="sposato-modal" id="promoPopup" role="dialog" aria-modal="true" aria-label="<?= htmlspecialchars($title) ?>">
+<div class="sposato-modal" id="promoPopup" role="dialog" aria-modal="true" aria-label="<?= htmlspecialchars($title) ?>"
+     data-season-name="<?= htmlspecialchars($activeSeason['name']) ?>"
+     data-from="<?= htmlspecialchars($activeSeason['show_from']) ?>"
+     data-until="<?= htmlspecialchars($activeSeason['show_until']) ?>"
+     data-delay="<?= (int)$delay ?>">
     <div class="sposato-modal-dialog" style="max-width:<?= $maxWidth ?>">
         <div class="sposato-modal-content">
             <div class="sposato-modal-header">
@@ -112,12 +103,3 @@ $showUntil = addslashes($activeSeason['show_until']);
         </div>
     </div>
 </div>
-
-<script>
-    var COOKIE = 'sposato_popup_dismissed';
-    var DELAY = <?= $delay ?> * 1000;
-    var FROM = new Date('<?= $showFrom ?>');
-    var UNTIL = new Date('<?= $showUntil ?>');
-    var activeSeason = '<?= $activeSeason['name'] ?>';
-
-</script>
